@@ -1,0 +1,49 @@
+<html style="overflow: hidden; height: 100%;">
+<head>
+<title></title>
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/chartjs/Chart.js"></script>
+<script src="../javascripts/test.js"></script></head><body style="overflow: hidden; height: 100%;"><ul id="menu"><li data-menuanchor="firstPage" class=""><a href="#firstPage">First section</a></li><li data-menuanchor="secondPage" class="active"><a href="#secondPage">Second section</a></li><li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li><li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li></ul><div id="fullpage" class="fullpage-wrapper fp-easing" style="height: 100%; position: relative; -webkit-transform: translate3d(0px, -790px, 0px);"><div id="section1" class="section fp-section fp-table" data-anchor="firstPage" style="height: 468px; background-color: rgb(27, 188, 155); width: 1395px;"><div class="fp-tableCell" style="height:468px;"><video id="video" autoplay="" loop="" muted="" style="width: 1395px;"><source src="/images/kitefly.mp4" type="video/mp4"><source src="/images/kitefly.webmhd.webm" type="video/webm"></video><h1 id="page1h1">MikaJam ekasivu</h1></div></div><div id="section2" class="section fp-section active" data-anchor="secondPage" style="height: 468px; background-color: rgb(75, 191, 195);"><div class="fp-slides"><div class="fp-slidesContainer fp-easing" style="width: 300%; -webkit-transform: translate3d(0px, 0px, 0px);"><div class="slide fp-slide fp-table active" style="width: 33.333333333333336%;"><div class="fp-tableCell" style="height:468px;"><h1 class="fadeElement" style="display: block;">MikaJam tokasivu slide1</h1><div class="well fadeElement playerBox" style="display: block;"><h2>Player Name</h2><p>Info text</p><canvas id="myChart" width="1600" height="800" style="width: 800px; height: 400px;"></canvas></div></div></div><div class="slide fp-slide fp-table" style="width: 33.333333333333336%;"><div class="fp-tableCell" style="height:468px;"><h1 class="fadeElement" style="display: block;">MikaJam tokasivu slide2</h1><div class="well fadeElement playerBox" style="display: block;"><h2>Player Name</h2><p>Info textInfo textInfo textInfo textInfo textInfo textInfo text Info text \</p></div></div></div><div class="slide container fp-slide fp-table" style="width: 33.333333333333336%;"><div class="fp-tableCell" style="height:468px;"><h1 class="fadeElement" style="display: block;">MikaJam tokasivu slide3</h1><div class="well fadeElement playerBox col-md-12" style="display: block;"><h2>Player Name</h2><p>Info text</p></div></div></div></div></div><div class="fp-controlArrow fp-prev"></div><div class="fp-controlArrow fp-next"></div></div><div id="section3" class="section fp-section fp-table" data-anchor="thirdPage" style="height: 468px; background-color: rgb(123, 170, 190);"><div class="fp-tableCell" style="height:468px;"></div></div><div id="section4" class="section fp-section fp-table" data-anchor="fourthPage" style="height: 468px; background-color: rgb(245, 245, 245);"><div class="fp-tableCell" style="height:468px;"><canvas id="chart" width="1000" height="1000" style="width: 500px; height: 500px;"></canvas></div></div></div><div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -43.5px;"><ul><li data-tooltip="firstSlide"><a href="#firstPage" class=""><span></span></a></li><li data-tooltip="secondSlide"><a href="#secondPage" class="active"><span></span></a></li><li data-tooltip=""><a href="#thirdPage"><span></span></a></li><li data-tooltip=""><a href="#fourthPage"><span></span></a></li></ul></div>
+<script>
+  //chart stuff
+  var data = {
+  labels: ["Skill1", "Skill2", "Skill3", "Skill4", "Skill5"],
+  datasets: [
+      {
+          label: "Skill",
+          fillColor: "rgba(220,220,220,0.2)",
+          strokeColor: "rgba(220,220,220,1)",
+          pointColor: "rgba(220,220,220,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: [65, 59, 90, 81, 56]
+      },
+      {
+          label: "My Second dataset",
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          data: [28, 48, 40, 19, 96]
+      }]
+  };
+
+  //Chart.defaults.global.responsive = true;
+  var options = {
+    datasetStrokeWidth : 2,
+    pointLabelFontColor : "#444",
+    angleLineColor : "rgba(0,0,0,0.6)",
+    scaleLineColor: "rgba(0,0,0,0.1)",
+    animationSteps: 100,
+    responsive: false,
+  };
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myRadarChart = new Chart(ctx).Radar(data, options);
+</script>
+
+</body></html>

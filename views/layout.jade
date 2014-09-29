@@ -3,5 +3,63 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/jquery.fullPage.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    script(src="/bower_components/jquery/dist/jquery.js")
+    script(src="/javascripts/slapText.min.js")
+    script(src="https://raw.githubusercontent.com/nnnick/Chart.js/master/Chart.js")
+
+    script(src="/javascripts/jquery.fullPage.js")
+    script(src="/javascripts/vendors/jquery.easings.min.js")
+    script(src="/javascripts/vendors/jquery.slimscroll.min.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+
+    script(src="/javascripts/test.js")
+
+
   body
-    block content
+    ul(id="menu" class="container")
+      li(data-menuanchor="firstPage", class="active")
+        a(href="#firstPage") First section
+      li(data-menuanchor="secondPage")
+        a(href="#secondPage") Second section
+      li(data-menuanchor="fourthPage" class="pull-right")
+        a(href="#fourthPage") Fourth section
+      li(data-menuanchor="thirdPage" class="pull-right")
+        a(href="#thirdPage") Third section
+
+
+    div(id="fullpage")
+      div(class="section active" id="section1")
+        video(id="video" autoplay loop muted)
+          source(src="/images/mika_layout.mp4" type="video/mp4")
+          source(src="/images/kitefly.webmhd.webm" type="video/webm")
+        //- div.fltext
+        //-   p In a game
+        //-     | <br>
+        //-     |there is always
+        //-     | <br>
+        //-     | a winner and
+        //-     | <br>
+        //-     |loser
+        h1#pheader MikaJam 20.12 @Vehkoja
+
+      div.section#section2
+        div.slide.container
+          div(class="well playerBox")
+            canvas(id="myChart" class="pull-right" width="400px" height="350")
+            h2 Player Name
+            p Info text
+        div.slide
+          h1.fadeElement MikaJam tokasivu slide2
+          div(class="well fadeElement playerBox")
+            h2.tcenter Player Name
+            p Info textInfo textInfo textInfo textInfo textInfo textInfo text Info text \
+        div(class="slide container")
+          h1.fadeElement MikaJam tokasivu slide3
+          div(class="well fadeElement playerBox col-md-12")
+            h2 Player Name
+            p Info text
+      div.section#section3
+      div.section#section4
+        canvas(id="chart" width="500px" height="500px")
