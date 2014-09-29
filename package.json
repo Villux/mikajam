@@ -25,5 +25,13 @@
     "heroku"
   ],
   "author": "VilleT",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Villux/mikajam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Villux/mikajam/issues"
+  },
+  "homepage": "https://github.com/Villux/mikajam"
 }

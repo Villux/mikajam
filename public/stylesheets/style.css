@@ -8,112 +8,6 @@ a {
 a {
   text-decoration: none;
 }
-#section2,
-#section3,
-#section4 {
-  background-size: cover;
-  background-image: url("/images/mika_layout.jpg");
-}
-#page1h1 {
-  z-index: 1;
-  position: absolute;
-  left: 45%;
-  bottom: 50%;
-  text-align: center;
-}
-.fltext {
-  z-index: 1;
-  position: absolute;
-  top: 80px;
-  background: rgba(255,255,255,0.5);
-  -moz-border-radius-topright: 10px;
-  -webkit-border-top-right-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-}
-#pheader {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  z-index: 1;
-  background: rgba(255,255,255,0.5);
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 10px;
-  font-size: 7.5em;
-  display: none;
-}
-.slider {
-  display: none;
-}
-.fader {
-  display: none;
-}
-.p2element {
-  display: none;
-}
-.fadeElement {
-  margin-top: 40px;
-  display: none;
-}
-.playerBox {
-  margin-top: 45px;
-  margin-bottom: 20px;
-  margin-left: 60px;
-  margin-right: 60px;
-}
-.tcenter {
-  text-align: center;
-}
-.well.playerBox {
-  min-height: 438px;
-  background-color: rgba(245,245,245,0.95);
-  border-color: rgba(78,50,17,0.3);
-  border-width: 2px;
-}
-.playerBox p {
-  margin-right: 440px;
-}
-.mas {
-  color: #56a4fe;
-}
-.con {
-  color: #f55;
-}
-.test {
-  background-color: #000;
-  width: 33%;
-  border-width: 5px;
-  z-index: 999;
-  display: inline-block;
-}
-.teamBox {
-  width: 70%;
-  height: 70%;
-  margin-top: 60px;
-  margin-left: 60px;
-  text-align: center;
-  background: rgba(255,255,255,0.9);
-}
-#mikaChart {
-  background-image: url("/images/mika_naama1.jpg");
-  background-size: cover;
-}
-#kimmoChart {
-  background-image: url("/images/kimmo_naama.jpg");
-  background-size: cover;
-}
-canvas {
-  padding-top: 10px;
-  width: 100% !important;
-  max-width: 400px;
-  max-height: 400px;
-  height: auto !important;
-  opacity: 1;
-  border-radius: 10px;
-}
 #menu li {
   display: inline-block;
   margin: 10px;
@@ -124,6 +18,8 @@ canvas {
 #menu li {
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  min-width: 150px;
+  text-align: center;
 }
 #menu li.active {
   background: #666;
@@ -158,6 +54,113 @@ canvas {
   padding: 0;
   margin: 0;
 }
+#section2,
+#section3,
+#section4 {
+  background-size: cover;
+  background-image: url("/images/mika_layout.jpg");
+}
+#page1h1 {
+  z-index: 1;
+  position: absolute;
+  left: 45%;
+  bottom: 50%;
+  text-align: center;
+}
+.fltext {
+  z-index: 1;
+  position: absolute;
+  top: 80px;
+  background: rgba(255,255,255,0.5);
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+}
+#pheader {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
+  background: rgba(255,255,255,0.5);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10px;
+  font-size: 7.5em;
+  display: none;
+  margin-top: 45px;
+  margin-bottom: -5px;
+}
+.slider {
+  display: none;
+}
+.fader {
+  display: none;
+}
+.p2element {
+  display: none;
+}
+.fadeElement {
+  margin-top: 40px;
+  display: none;
+}
+.playerBox {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.tcenter {
+  text-align: center;
+}
+.well.playerBox {
+  min-height: 438px;
+  background-color: rgba(245,245,245,0.95);
+  border-color: rgba(78,50,17,0.3);
+  border-width: 2px;
+}
+.mas {
+  color: #56a4fe;
+}
+.con {
+  color: #f55;
+}
+.test {
+  background-color: #000;
+  width: 33%;
+  border-width: 5px;
+  z-index: 999;
+  display: inline-block;
+}
+.teamBox {
+  width: 70%;
+  height: 70%;
+  margin-top: 60px;
+  margin-left: 60px;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+}
+#mikaChart {
+  background-image: url("/images/mika_profile.jpg");
+  background-size: cover;
+}
+#kimmoChart {
+  background-image: url("/images/kimmo_naama.jpg");
+  background-size: cover;
+}
+canvas {
+  padding-top: 10px;
+  width: 100% !important;
+  max-width: 400px;
+  max-height: 400px;
+  height: auto !important;
+  opacity: 1;
+  border-radius: 10px;
+  float: right;
+  margin-left: 10px;
+}
 @media screen and (max-width: 600px) {
   #video {
     display: none;
@@ -165,5 +168,33 @@ canvas {
   #section1 {
     background-size: cover;
     background-image: url("/images/testbg.jpg");
+  }
+  canvas {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px), screen and (max-height: 650px) {
+  canvas {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .well.playerBox {
+    min-height: 338px;
+  }
+  #pheader {
+    font-size: 5.5em;
+  }
+  #menu li {
+    min-width: 20px;
+  }
+  .playerBox h2 {
+    font-size: 2em;
+  }
+  .playerBox h3 {
+    margin-top: 0px;
+    font-size: 1em;
+  }
+  .playerBox p {
+    font-size: 0.8em;
   }
 }

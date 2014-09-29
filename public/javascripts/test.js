@@ -1,28 +1,60 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage({
-      sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-      menu: '#menu',
-      navigationTooltips: ['firstSlide', 'secondSlide'],
-      navigation: true,
-      css3: true,
-      scrollOverflow: false,
-      afterLoad: function(anchorLink, index){
-          if(anchorLink != 'secondPage'){
-                $('.fadeElement').hide();
+    if ($(window).width() < 600 && $(window).height() <500) {
+      $('#fullpage').fullpage({
+        sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
+        anchors: ['Home', 'Players', 'thirdPage', 'fourthPage'],
+        menu: '#menu',
+        css3: true,
+        scrollOverflow: true,
+        afterLoad: function(anchorLink, index){
+            if(anchorLink != 'Players'){
+                  $('.fadeElement').hide();
+            }
+            //using anchorLink
+            if(anchorLink == 'Players'){
+              mikaChart.Bar(dataMika, options)
+            }
+        },
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+          if(anchorLink == 'Players' && slideIndex == 1){
+            mikaChart.Bar(dataMika, options)
           }
-          //using anchorLink
-          if(anchorLink == 'secondPage'){
-              $('.fadeElement').fadeIn("slow", function() {console.log("animation completed")});
+        },
+        onSlideLeave: function(anchorLink, index, slideIndex, direction){
+          //
+        }
+      });
+    }
+    else {
+      console.log("big screen");
+      var test =$(window).width();
+      console.log(test);
+      $('#fullpage').fullpage({
+        sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
+        anchors: ['Home', 'Players', 'thirdPage', 'fourthPage'],
+        menu: '#menu',
+        css3: true,
+        scrollOverflow: false,
+        afterLoad: function(anchorLink, index){
+            if(anchorLink != 'Players'){
+              //
+            }
+            //using anchorLink
+            if(anchorLink == 'Players'){
+              mikaChart.Bar(dataMika, options)
+            }
+        },
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+          if(anchorLink == 'Players' && slideIndex == 1){
+            mikaChart.Bar(dataMika, options)
           }
-      },
-      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-        $('.fadeElement').fadeIn("slow", function() {console.log("animation completed")});
-      },
-      onSlideLeave: function(anchorLink, index, slideIndex, direction){
-        $('.fadeElement').hide();
-      }
-    });
+        },
+        onSlideLeave: function(anchorLink, index, slideIndex, direction){
+          //
+        }
+      });
+    }
+
 
     // $('#bigtext').bigtext({
     //   minfontsize: 72 // default is null
@@ -46,7 +78,13 @@ $(document).ready(function() {
     // Wait until the video meta data has loaded
     $('#section1 video').on('loadedmetadata', function() {
       console.log(screen.width);
-      if (screen.width <= 600) {
+      console.log(screen.height);
+      var x = $(window).height();
+      var y = $(window).width();
+      console.log(x);
+      console.log(y);
+      if (screen.width <= 1200) {
+        $("#canvas").css( "color", "red" );
         return;
       }
       var $width, $height, // Width and height of screen
@@ -108,39 +146,7 @@ $(document).ready(function() {
         }]
     };
 
-    // Chart.defaults.global.responsive = true;
-    var options = {
-      datasetStrokeWidth : 2,
-      pointLabelFontColor : "#000000",
-      angleLineColor : "rgba(0,0,0,0.7)",
-      scaleLineColor: "rgba(0,0,0,0.2)",
-      animationSteps: 200,
-      responsive: false,
-      label : 'Sleep',
-      scaleFontSize: 13,
-      scaleFontStyle: "normal",
-      scaleFontColor: "#000000",
 
-    };
-    // var ctx = document.getElementById("myChart").getContext("2d");
-    // var myRadarChart = new Chart(ctx).Radar(data, options);
-
-
-    var dataMika = {
-        labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle"],
-        datasets: [
-            {
-                label: "Skills",
-                fillColor: "rgba(255, 255, 255, 0.68)",
-                strokeColor: "rgba(199, 198, 198, 0.82)",
-                highlightFill: "rgba(86, 164, 254, 0.75)",
-                highlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 100, 56, 90]
-            }
-        ]
-    };
-    var ctx2 = document.getElementById("mikaChart").getContext("2d");
-    var myBarChart = new Chart(ctx2).Bar(dataMika, options);
 
     var dataKimmo = {
         labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle"],
@@ -160,3 +166,190 @@ $(document).ready(function() {
 
 
 });
+var options = {
+  datasetStrokeWidth : 2,
+  scaleShowLabels : true,
+  pointLabelFontColor : "#000000",
+  angleLineColor : "rgba(0,0,0,0.7)",
+  scaleLineColor: "rgba(0,0,0,0.2)",
+  animationSteps: 200,
+  responsive: false,
+  label : 'Sleep',
+  scaleFontSize: 13,
+  scaleFontStyle: "normal",
+  scaleFontColor: "#000000",
+
+};
+
+var ctx;
+
+// Data Mika Linnaluoma
+var dataMika = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(225, 238, 255, 0.69)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [70, 70, 60, 65, 100, 80, 74]
+        }
+    ]
+};
+ctx = document.getElementById("mikaChart").getContext("2d");
+var mikaChart = new Chart(ctx);
+// Data Mikko Hirvonen
+var dataMikko = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [79, 75, 70, 85, 90, 70, 78]
+        }
+    ]
+};
+// Data Tuomas Viertola
+var dataTuomas = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [97,97,93,95,99,88,95]
+        }
+    ]
+};
+// Data Petteri Salo
+var dataPetteri = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [85,79,75,90,74,65,78]
+        }
+    ]
+};
+// Data Jukka Rajamäki
+var dataJukka = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [90,80,90,88,70,79,83]
+        }
+    ]
+};
+// Data Jukka Heino
+var dataJukkah = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [65,90,68,75,85,91,79]
+        }
+    ]
+};
+// Data Kristian Lindfors
+var dataKristian = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [60,65,85,65,85,100,77]
+        }
+    ]
+};
+// Data Jussi Malminen
+var dataJussi = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [74,79,75,95,80,87,82]
+        }
+    ]
+};
+// Data Riku Lempiä
+var dataRiku = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [83,91,97,83,69,97,87]
+        }
+    ]
+};
+// Data Olli Harju
+var dataOlli = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [55,60,79,65,77,85,70]
+        }
+    ]
+};
+// Data Jaakko Lievonen
+var dataJaakko = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(86, 164, 254, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [55,60,88,55,70,83,69]
+        }
+    ]
+};
+// Data Kimmo Reunila
+var dataKimmo = {
+    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 255, 255, 0.68)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 85, 85, 0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [70,80,80,76,83,85,79]
+        }
+    ]
+};
