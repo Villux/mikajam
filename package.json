@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "~4.8.6",
@@ -14,5 +14,16 @@
     "debug": "~1.0.4",
     "jade": "~1.5.0",
     "stylus": "0.42.3"
-  }
+  },
+  "description": "MikaJam nettisaitti",
+  "main": "app.js",
+  "devDependencies": {},
+  "engines": {
+    "node": "0.10.x"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "VilleT",
+  "license": "ISC"
 }

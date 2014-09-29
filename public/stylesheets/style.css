@@ -14,9 +14,6 @@ a {
   background-size: cover;
   background-image: url("/images/mika_layout.jpg");
 }
-#section3 {
-  text-align: center;
-}
 #page1h1 {
   z-index: 1;
   position: absolute;
@@ -29,21 +26,11 @@ a {
   position: absolute;
   top: 80px;
   background: rgba(255,255,255,0.5);
-}
-.fltext {
   -moz-border-radius-topright: 10px;
-}
-.fltext {
   -webkit-border-top-right-radius: 10px;
-}
-.fltext {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-}
-.fltext {
   -moz-border-radius-bottomright: 10px;
-}
-.fltext {
   -webkit-border-bottom-right-radius: 10px;
 }
 #pheader {
@@ -80,11 +67,27 @@ a {
 .tcenter {
   text-align: center;
 }
-.well {
-  background-color: rgba(245,245,245,0.4);
-}
 .well.playerBox {
-  min-height: 400px;
+  min-height: 438px;
+  background-color: rgba(245,245,245,0.95);
+  border-color: rgba(78,50,17,0.3);
+  border-width: 2px;
+}
+.playerBox p {
+  margin-right: 440px;
+}
+.mas {
+  color: #56a4fe;
+}
+.con {
+  color: #f55;
+}
+.test {
+  background-color: #000;
+  width: 33%;
+  border-width: 5px;
+  z-index: 999;
+  display: inline-block;
 }
 .teamBox {
   width: 70%;
@@ -94,17 +97,22 @@ a {
   text-align: center;
   background: rgba(255,255,255,0.9);
 }
-#myChart {
-  background: rgba(37,33,33,0.3);
-  border-radius: 10px;
+#mikaChart {
+  background-image: url("/images/mika_naama1.jpg");
+  background-size: cover;
+}
+#kimmoChart {
+  background-image: url("/images/kimmo_naama.jpg");
+  background-size: cover;
 }
 canvas {
   padding-top: 10px;
   width: 100% !important;
   max-width: 400px;
-  max-height: 350px;
+  max-height: 400px;
   height: auto !important;
   opacity: 1;
+  border-radius: 10px;
 }
 #menu li {
   display: inline-block;

@@ -111,38 +111,52 @@ $(document).ready(function() {
     // Chart.defaults.global.responsive = true;
     var options = {
       datasetStrokeWidth : 2,
-      pointLabelFontColor : "#444",
+      pointLabelFontColor : "#000000",
       angleLineColor : "rgba(0,0,0,0.7)",
       scaleLineColor: "rgba(0,0,0,0.2)",
-      animationSteps: 100,
+      animationSteps: 200,
       responsive: false,
       label : 'Sleep',
+      scaleFontSize: 13,
+      scaleFontStyle: "normal",
+      scaleFontColor: "#000000",
+
     };
-    var ctx = document.getElementById("myChart").getContext("2d");
-    var myRadarChart = new Chart(ctx).Radar(data, options);
+    // var ctx = document.getElementById("myChart").getContext("2d");
+    // var myRadarChart = new Chart(ctx).Radar(data, options);
 
 
-    var data1 = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+    var dataMika = {
+        labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle"],
         datasets: [
             {
-                label: "My First dataset",
-                fillColor: "rgba(220,220,220,0.5)",
-                strokeColor: "rgba(220,220,220,0.8)",
-                highlightFill: "rgba(220,220,220,0.75)",
+                label: "Skills",
+                fillColor: "rgba(255, 255, 255, 0.68)",
+                strokeColor: "rgba(199, 198, 198, 0.82)",
+                highlightFill: "rgba(86, 164, 254, 0.75)",
                 highlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-                label: "My Second dataset",
-                fillColor: "rgba(151,187,205,0.5)",
-                strokeColor: "rgba(151,187,205,0.8)",
-                highlightFill: "rgba(151,187,205,0.75)",
-                highlightStroke: "rgba(151,187,205,1)",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [65, 59, 80, 100, 56, 90]
             }
         ]
     };
-    var ctx2 = document.getElementById("chart").getContext("2d");
-    var myBarChart = new Chart(ctx2).Bar(data1);
+    var ctx2 = document.getElementById("mikaChart").getContext("2d");
+    var myBarChart = new Chart(ctx2).Bar(dataMika, options);
+
+    var dataKimmo = {
+        labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle"],
+        datasets: [
+            {
+                label: "Skills",
+                fillColor: "rgba(255, 255, 255, 0.68)",
+                strokeColor: "rgba(199, 156, 156, 0.82)",
+                highlightFill: "rgba(255, 85, 85, 0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data: [10, 30, 43, 70, 56, 78]
+            }
+        ]
+    };
+    var ctx2 = document.getElementById("kimmoChart").getContext("2d");
+    var myBarChart = new Chart(ctx2).Bar(dataKimmo, options);
+
+
 });
