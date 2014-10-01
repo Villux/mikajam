@@ -80,18 +80,20 @@ a
   -webkit-border-bottom-right-radius: 10px
 
 #pheader
-  width: 100%
+  width: 98%
   bottom: 0
   position: fixed
-  z-index 1
-  background: rgba(255,255,255, 0.5)
+  background: rgba(29, 141, 204, 0.79)
   padding-left: 5%
   padding-right: 5%
   padding-bottom: 10px
-  font-size: 6.5em
+  font-size: 6em
   display: none
   margin-top: 45px
-  margin-bottom: -5px
+  border-radius: 15px
+  margin-left: 13px
+  font-family: airstream;
+  color: rgba(211, 211, 211, 0.79)
 
 
 .slider
@@ -112,6 +114,7 @@ a
   margin-bottom: 20px
   margin-left: 60px
   margin-right: 60px
+  // position: relative
 
 
 .tcenter
@@ -119,23 +122,48 @@ a
 
 
 .well.playerBox
-  min-height: 438px
-  background-color: rgba(245, 245, 245, 0.95);
-  border-color: rgba(78, 50, 17, 0.3)
+  font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  color: #ffffff
+  display:none
+  overflow:auto
+  // min-height: 438px
+  // background-color: rgba(245, 245, 245, 0.95);
+  border-style: solid
+  // border-color: #ff6f0f
+  border-radius:20px
   border-width: 2px
+  background: rgb(238,238,238); /* Old browsers */
+  // background: -webkit-linear-gradient(top,  rgba(238,238,238,0.9) 0%,rgba(204,204,204,0.9) 100%); /* Chrome10+,Safari5.1+ */
+  //background: -webkit-linear-gradient(top,  rgba(238,238,238,0.9) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -webkit-linear-gradient(top,  rgba(238,238,238,0.95) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -webkit-linear-gradient(top,  rgba(225,255,255,0.95) 0%,rgba(253,255,255,0.96) 15%,rgba(230,248,253,0.97) 30%,rgba(200,238,251,0.98) 54%,rgba(190,228,248,0.99) 75%,rgba(177,216,245,1) 100%); /* Chrome10+,Safari5.1+ */
+  //   background: -webkit-linear-gradient(top,  rgba(247,251,252,0.95) 0%,rgba(229,246,255,0.97) 40%,rgba(193,221,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  //   background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+  // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,0.1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+  //background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* Opera 12+ */
+  // background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+  // background: radial-gradient(ellipse at center,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-.mas
-  color: rgba(86, 164, 254, 1)
-.con
-  color: rgba(255, 85, 85, 1)
 
-.test
-  background-color: #000000
-  // position: absolute
-  width: 33%
-  border-width: 5px
-  z-index: 999
-  display: inline-block
+.well.masB
+  //background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%, rgba(14,14,14,0.71) 58%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+  //background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,0.3)), color-stop(58%,rgba(14,14,14,0.71)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.6) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* Opera 12+ */
+  // background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* IE10+ */
+  // background: radial-gradient(ellipse at center,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* W3C */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.well.conB
+  //   background: -moz-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%, rgba(143,2,34,0.92) 18%, rgba(86,43,44,1) 100%); /* FF3.6+ */
+  // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(169,3,41,0.9)), color-stop(18%,rgba(143,2,34,0.92)), color-stop(100%,rgba(86,43,44,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.6) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -o-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* Opera 12+ */
+  // background: -ms-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* IE10+ */
+  // background: radial-gradient(ellipse at center,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* W3C */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6a90329', endColorstr='#562b2c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 
 .teamBox
   width: 70%
@@ -144,25 +172,103 @@ a
   margin-left 60px
   text-align: center
   background: rgba(255,255,255, 0.9)
+  display: inline-block
 
-#mikaChart
-  // background: rgba(221, 195, 96, 0.1)
-  background-image: url("/images/mika_profile.jpg")
+.playerStats
+  text-align: left
+  vertical-align: middle
+  width: 100%
+  height: 100%
+
+.playerBox ul
+  list-style-type:none
+  padding-left: 0px
+
+
+.playerBox ul li
+  border-top-width: 0px
+  border-left-width: 0px
+  border-right-width: 0px
+  border-bottom-width: 1px
+  border-style: solid
+  border-color: rgba(255, 255, 255, 0.73)
+.mas
+  color: #ffffff
+.con
+  color: #000000
+
+canvas
+  float: right
+  padding-top: 10px
+  height: auto !important
+  width: 100% !important
+  border-radius: 10px
+
+.playerPhoto
+  float: left
+  border-radius: 10px
+
+.frame
+    height: 100%
+    white-space: nowrap
+    // text-align: center
+
+.helper
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+// .masBorder
+//     border-style: solid
+//     border-right-color: #ff6f0f
+//     border-top-width: 0px
+//     border-right-width: medium
+//     border-bottom-width: 0px
+//     border-left-width: 0px
+
+img
+    vertical-align: middle
+    width: 100%
+    height: 100%
+
+
+// #mikaChart
+//   background-image: url("/images/mika_profile.jpg")
+//   background-size: cover
+#mikkoChart
+  background-image: url("/images/mikko_profile.jpg")
   background-size: cover
+#tuomasChart
+  background-image: url("/images/tuomas_profile.jpg")
+  background-size: cover
+#petteriChart
+  background-image: url("/images/petteri_profile.jpg")
+  background-size: cover
+#jukkaChart
+  background-image: url("/images/jukka_profile.jpg")
+  background-size: cover
+#jukkahChart
+  background-image: url("/images/jukkah_profile.jpg")
+  background-size: cover
+#kristianChart
+  background-image: url("/images/kristian_profile.jpg")
+  background-size: cover
+#jussiChart
+  background-image: url("/images/jussi_profile.jpg")
+  background-size: cover
+#rikuChart
+  background-image: url("/images/riku_profile.jpg")
+  background-size: cover
+#olliChart
+  background-image: url("/images/olli_profile.jpg")
+  background-size: cover
+#jaakkoChart
+  background-image: url("/images/jaakko_profile.jpg")
+  background-size: cover
+
 #kimmoChart
   background-image: url("/images/kimmo_naama.jpg")
   background-size: cover
-
-canvas
-  padding-top: 10px
-  width: 100% !important
-  max-width: 400px
-  max-height: 400px
-  height: auto !important
-  opacity: 1
-  border-radius: 10px
-  float: right
-  margin-left: 10px
 
 
 @media screen and (max-width: 600px)
@@ -174,21 +280,26 @@ canvas
   canvas
     display: none
 
+@font-face {
+    font-family: airstream;
+    src: url("/stylesheets/Airstream-webfont.woff");
+}
+
 
 @media screen and (max-width: 1000px), screen and (max-height: 650px)
-  canvas
-    max-width: 200px
-    max-height: 200px
-  .well.playerBox
-    min-height: 338px
-  #pheader
-    font-size: 5.5em
-  #menu li
-    min-width: 20px
-  .playerBox h2
-    font-size: 2em
-  .playerBox h3
-    margin-top: 0px
-    font-size: 1em
-  .playerBox p
-    font-size: 0.8em
+  // canvas
+  //   max-width: 200px
+  //   max-height: 200px
+  // .well.playerBox
+  //   min-height: 338px
+  // #pheader
+  //   font-size: 5.5em
+  // #menu li
+  //   min-width: 20px
+  // .playerBox h2
+  //   font-size: 2em
+  // .playerBox h3
+  //   margin-top: 0px
+  //   font-size: 1em
+  // .playerBox p
+  //   font-size: 0.8em
