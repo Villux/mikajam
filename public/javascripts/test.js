@@ -1,13 +1,14 @@
+
 $(document).ready(function() {
     if ($(window).width() < 600 && $(window).height() <500) {
       $('#fullpage').fullpage({
         sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
-        anchors: ['Home', 'Players', 'thirdPage', 'fourthPage'],
+        anchors: ['Home', 'Players', 'Rosters', 'fourthPage'],
         menu: '#menu',
         css3: true,
         scrollOverflow: true,
         afterLoad: function(anchorLink, index){
-            if(anchorLink != 'Players'){
+            if(anchorLink != 'Rosters'){
                   $('.fadeElement').hide();
             }
             //using anchorLink
@@ -94,41 +95,38 @@ $(document).ready(function() {
     else {
       $('#fullpage').fullpage({
         sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
-        anchors: ['Home', 'Players', 'thirdPage', 'fourthPage'],
+        anchors: ['Home', 'Rosters', 'Players', 'fourthPage'],
         menu: '#menu',
         css3: true,
         scrollOverflow: false,
         afterLoad: function(anchorLink, index){
-            if(anchorLink != 'Players'){
-              //
-            }
-            //using anchorLink
-            if(anchorLink == 'Players'){
-              $(".well.playerBox").show();
-              if (!mikaChart) {
-                mikaChart = new Chart(document.getElementById("mikaChart").getContext("2d"));
-              }
-              mikaChart.Bar(dataMika, optionsM);
-            }
-        },
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-          var canvas = document.getElementsByTagName('canvas')[0];
-          var playerBox = document.getElementsByClassName('frame')[0];
-          console.log(playerBox.offsetWidth);
-          // canvas.width  = playerBox.offsetWidth;
-          // canvas.height = playerBox.offsetHeight;
-          $(".well.playerBox").show();
-          if(anchorLink == 'Players' && slideIndex == 0){
+          if(anchorLink == 'Rosters'){
+          }
+          if(anchorLink == 'Players'){
             if (!mikaChart) {
-              mikaChart = new Chart(document.getElementById("mikaChart").getContext("2d"));
+              var canvas = document.getElementsByTagName('canvas')[0];
+              var playerBox = document.getElementById('frame');
+              canvas.width  = playerBox.offsetWidth - 30;
+              canvas.height = playerBox.offsetHeight;
+              var ctx = document.getElementById("mikaChart").getContext("2d");
+              mikaChart = new Chart(ctx);
             }
             mikaChart.Bar(dataMika, optionsM);
-
-
           }
-          if(anchorLink == 'Players' && slideIndex == 1){
+        },
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+          if(anchorLink == 'Players' && slideIndex == 0){
+          }
+          if(anchorLink == 'Players' && slideIndex == 1 ){
             if (!matiasmChart) {
-              matiasmChart = new Chart(document.getElementById("matiasmChart").getContext("2d"));
+              var canvas = document.getElementById('matiasmChart');
+              console.log(canvas);
+              var playerBox = document.getElementById('frame');
+              console.log(playerBox);
+              canvas.width  = playerBox.offsetWidth - 30;
+              canvas.height = playerBox.offsetHeight;
+              var ctx = document.getElementById("matiasmChart").getContext("2d");
+              matiasmChart = new Chart(ctx);
             }
             matiasmChart.Bar(dataMatiasm, optionsC);
           }
@@ -302,7 +300,7 @@ var optionsM = {
   animationSteps: 100,
   responsive: false,
   label : 'Sleep',
-  scaleFontSize: 13,
+  scaleFontSize: 11,
   scaleFontStyle: "normal",
   scaleFontColor: "#ffffff",
 
@@ -316,7 +314,7 @@ var optionsC = {
   animationSteps: 100,
   responsive: false,
   label : 'Sleep',
-  scaleFontSize: 13,
+  scaleFontSize: 11,
   scaleFontStyle: "normal",
   scaleFontColor: "#ffffff",
 
@@ -341,7 +339,7 @@ var dataMika = {
 // // mikaChart = new Chart(document.getElementById("mikaChart").getContext("2d"));
 // // Data Players Hirvonen
 // var dataMikko = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -356,7 +354,7 @@ var dataMika = {
 // var mikkoChart = new Chart(document.getElementById("mikkoChart").getContext("2d"));
 // // Data Tuomas Viertola
 // var dataTuomas = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -371,7 +369,7 @@ var dataMika = {
 // var tuomasChart = new Chart(document.getElementById("tuomasChart").getContext("2d"));
 // // Data Petteri Salo
 // var dataPetteri = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -386,7 +384,7 @@ var dataMika = {
 // var petteriChart = new Chart(document.getElementById("petteriChart").getContext("2d"));
 // // Data Jukka Rajamäki
 // var dataJukka = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -401,7 +399,7 @@ var dataMika = {
 // var jukkaChart = new Chart(document.getElementById("jukkaChart").getContext("2d"));
 // // Data Jukka Heino
 // var dataJukkah = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -416,7 +414,7 @@ var dataMika = {
 // var jukkahChart = new Chart(document.getElementById("jukkahChart").getContext("2d"));
 // // Data Kristian Lindfors
 // var dataKristian = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -431,7 +429,7 @@ var dataMika = {
 // var kristianChart = new Chart(document.getElementById("kristianChart").getContext("2d"));
 // // Data Jussi Malminen
 // var dataJussi = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -446,7 +444,7 @@ var dataMika = {
 // var jussiChart = new Chart(document.getElementById("jussiChart").getContext("2d"));
 // // Data Riku Lempiä
 // var dataRiku = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -461,7 +459,7 @@ var dataMika = {
 // var rikuChart = new Chart(document.getElementById("rikuChart").getContext("2d"));
 // // Data Olli Harju
 // var dataOlli = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -476,7 +474,7 @@ var dataMika = {
 // var olliChart = new Chart(document.getElementById("olliChart").getContext("2d"));
 // // Data Jaakko Lievonen
 // var dataJaakko = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -491,7 +489,7 @@ var dataMika = {
 // var jaakkoChart = new Chart(document.getElementById("jaakkoChart").getContext("2d"));
 // // Data Benjamin Kokkonen
 // var dataBenjamin = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -509,7 +507,7 @@ var dataMika = {
 // ////////////////////////////
 // // Data Kimmo Reunila
 // var dataKimmo = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -524,7 +522,7 @@ var dataMika = {
 // var kimmoChart = new Chart(document.getElementById("kimmoChart").getContext("2d"));
 // // Data Teemu Seppälä
 // var dataTeemu = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -539,7 +537,7 @@ var dataMika = {
 // var teemuChart = new Chart(document.getElementById("teemuChart").getContext("2d"));
 // // Data Mikko Jämsä
 // var dataMikkoj = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -554,7 +552,7 @@ var dataMika = {
 // var mikkojChart = new Chart(document.getElementById("mikkojChart").getContext("2d"));
 // // Data Olli Salminen
 // var dataOllis = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -569,7 +567,7 @@ var dataMika = {
 // var ollisChart = new Chart(document.getElementById("ollisChart").getContext("2d"));
 // // Data Juhani Jämsä
 // var dataJuhani = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -584,7 +582,7 @@ var dataMika = {
 // var juhaniChart = new Chart(document.getElementById("juhaniChart").getContext("2d"));
 // // Data Niklas Lindström
 // var dataNiklas = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -599,7 +597,7 @@ var dataMika = {
 // var niklasChart = new Chart(document.getElementById("niklasChart").getContext("2d"));
 // // Data Matias Repo
 // var dataMatias = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -613,8 +611,9 @@ var dataMika = {
 // };
 // var matiasChart = new Chart(document.getElementById("matiasChart").getContext("2d"));
 // Data Matias Mattila
+var matiasmChart = null;
 var dataMatiasm = {
-    labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+    labels: ["scoring", "defence", "rebounding", "passing|IQ","speed", "hustle", "average"],
     datasets: [
         {
             label: "Skills",
@@ -622,14 +621,13 @@ var dataMatiasm = {
             strokeColor: "rgba(199, 156, 156, 0.82)",
             highlightFill: "rgba(255, 255, 255, 0.83)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: [74,90,92,71,75,100,85]
+            data: [74,90,92,71,85,100,85]
         }
     ]
 };
-var matiasmChart = new Chart(document.getElementById("matiasmChart").getContext("2d"));
 // // Data Sauli Sukanen
 // var dataSauli = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -644,7 +642,7 @@ var matiasmChart = new Chart(document.getElementById("matiasmChart").getContext(
 // var sauliChart = new Chart(document.getElementById("sauliChart").getContext("2d"));
 // // Data Lauri Jämsä
 // var dataLauri = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -659,7 +657,7 @@ var matiasmChart = new Chart(document.getElementById("matiasmChart").getContext(
 // var lauriChart = new Chart(document.getElementById("lauriChart").getContext("2d"));
 // // Data Vili Valajärvi
 // var dataVili = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -674,7 +672,7 @@ var matiasmChart = new Chart(document.getElementById("matiasmChart").getContext(
 // var viliChart = new Chart(document.getElementById("viliChart").getContext("2d"));
 // // Data Jussi Lilja
 // var dataJussil = {
-//     labels: ["scoring", "defence", "rebounding", "speed", "passing|IQ", "hustle", "average"],
+//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
 //     datasets: [
 //         {
 //             label: "Skills",
@@ -687,3 +685,5 @@ var matiasmChart = new Chart(document.getElementById("matiasmChart").getContext(
 //     ]
 // };
 // var jussilChart = new Chart(document.getElementById("jussilChart").getContext("2d"));
+
+// var function loadPlayerStats(statsObject,)
