@@ -203,8 +203,22 @@ div .thumbnail {
 .conTeam div .thumbnail:hover {
   border-color: #fff;
 }
+.masContainer {
+  position: relative;
+}
+.masTeamText {
+  position: absolute;
+  font-family: airstream;
+  margin-top: 55px;
+}
+.conContainer {
+  position: relative;
+}
+.conTeamText {
+  position: absolute;
+  font-family: airstream;
+}
 .thumbnailTextMas {
-  padding-top: 20%;
   opacity: 0;
   color: #fff;
   top: 0;
