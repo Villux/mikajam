@@ -259,6 +259,7 @@ $(document).ready(function() {
       })(); // Run function immediately
       // Run function also on window resize.
       $(window).resize(adjSize);
+      // static background for here - if needed
       $('#video')[0].play();
       $( "#pheader" ).fadeIn( 10000, 'swing', function() {
         // Animation complete.
