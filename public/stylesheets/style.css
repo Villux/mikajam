@@ -39,318 +39,6 @@ body {
   position: absolute;
   bottom: 0;
 }
-a {
-  color: #00b7ff;
-}
-a {
-  text-decoration: none;
-}
-#menu li {
-  display: inline-block;
-  margin: 10px;
-  background: rgba(0,0,0,0.8);
-}
-#menu li {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  min-width: 150px;
-  text-align: center;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 1px;
-}
-#menu li.active {
-  background: rgba(255,255,255,0.8);
-  color: #fff;
-}
-#menu li a {
-  text-decoration: none;
-  color: #fff;
-}
-#menu li .aMas:hover {
-  background: rgba(29,141,204,0.9);
-  border-radius: 10px;
-}
-#menu li .aCon:hover {
-  background: rgba(255,66,61,0.9);
-  border-radius: 10px;
-}
-#menu li.active .aMas:hover {
-  background: rgba(29,141,204,0.9);
-  border-radius: 10px;
-}
-#menu li.active .aCon:hover {
-  background: rgba(255,66,61,0.9);
-  border-radius: 10px;
-}
-#menu li a,
-#menu li.active a {
-  padding: 9px 18px;
-  display: block;
-}
-#menu li.active a {
-  color: #000;
-}
-#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 40px;
-  z-index: 70;
-  width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 0;
-}
-#section1,
-#section2,
-#section3,
-#section4 {
-  background-size: cover;
-  background-image: url("/images/bballtexture.png");
-}
-#page1h1 {
-  z-index: 1;
-  position: absolute;
-  left: 45%;
-  bottom: 50%;
-  text-align: center;
-}
-.fltext {
-  z-index: 1;
-  position: absolute;
-  top: 80px;
-  background: rgba(255,255,255,0.5);
-  -moz-border-radius-topright: 10px;
-  -webkit-border-top-right-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-}
-#section1 #pheader {
-  text-align: center;
-}
-#pheader {
-  width: 98%;
-  top: 0;
-  position: fixed;
-  background: rgba(0,0,0,0.79);
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 10px;
-  font-size: 5.5em;
-  display: none;
-  border-radius: 15px;
-  margin-left: 13px;
-  font-family: airstream;
-  color: rgba(211,211,211,0.79);
-}
-.masTeam div .thumbnail:hover {
-  border-color: #fff;
-}
-.conTeam div .thumbnail:hover {
-  border-color: #fff;
-}
-.masContainer {
-  position: relative;
-  background: rgba(195,200,202,0.94);
-  border-radius: 20px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-.conContainer {
-  position: relative;
-  background: rgba(195,200,202,0.94);
-  border-radius: 20px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-}
-.masTeamText {
-  position: absolute;
-  font-family: airstream;
-  margin-top: 55px;
-}
-.conTeamText {
-  position: absolute;
-  font-family: airstream;
-}
-.thumbnailTextMas {
-  opacity: 0;
-  color: #fff;
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.thumbnailTextCon {
-  opacity: 0;
-  color: #fff;
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.thumbnailTextMas:hover {
-  background-color: #1d8dcc;
-  font-family: airstream;
-  font-size: 1.3em;
-  opacity: 1;
-  border-radius: 3px;
-}
-.thumbnailTextCon:hover {
-  background-color: #ff423d;
-  font-family: airstream;
-  font-size: 1.5em;
-  opacity: 1;
-  border-radius: 3px;
-}
-div .thumbnail {
-  background: none;
-  border-width: 0px;
-}
-.photoContainer {
-  position: relative;
-  text-align: center;
-  background: rgba(255,255,255,0.2) !important;
-}
-.playerBox img {
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-}
-.well.masTeam {
-  margin-top: 55px;
-  border-color: #1d8dcc;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 20px;
-  position: relative;
-  background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
-/* Chrome10+,Safari5.1+ */
-}
-.well.conTeam {
-  border-color: #ff423d;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 20px;
-  background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
-/* Chrome10+,Safari5.1+ */
-}
-.well.playerBox {
-  font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
-  color: #fff;
-  overflow: auto;
-  border-style: solid;
-  border-radius: 20px;
-  border-width: 2px;
-  margin-top: 45px;
-  margin-bottom: 20px;
-  margin-left: 60px;
-  margin-right: 60px;
-  padding: 0px;
-}
-.well.masB {
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(125,126,125,0.9) 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
-/* Chrome10+,Safari5.1+ */
-}
-.well.conB {
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(125,126,125,0.9) 0%, rgba(14,14,14,0.6) 58%, #0e0e0e 100%);
-/* Chrome10+,Safari5.1+ */
-}
-.playerStats {
-  text-align: left;
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-}
-.playerBox ul {
-  list-style-type: none;
-  padding-left: 0px;
-}
-.playerBox ul li {
-  border-top-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 1px;
-  border-style: solid;
-  border-color: rgba(255,255,255,0.73);
-}
-.mas {
-  color: #fff;
-}
-.con {
-  color: #000;
-}
-canvas {
-  margin-top: 20px;
-  float: right;
-  height: auto !important;
-  width: 100% !important;
-  border-radius: 10px;
-}
-.playerPhoto {
-  float: left;
-  border-radius: 10px;
-}
-.frame {
-  white-space: nowrap;
-  padding: 0px;
-}
-.helper {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-.row {
-  margin-left: 0px !important;
-}
-#mikkoChart {
-  background-image: url("/images/mikko_profile.jpg");
-  background-size: cover;
-}
-#tuomasChart {
-  background-image: url("/images/tuomas_profile.jpg");
-  background-size: cover;
-}
-#petteriChart {
-  background-image: url("/images/petteri_profile.jpg");
-  background-size: cover;
-}
-#jukkaChart {
-  background-image: url("/images/jukka_profile.jpg");
-  background-size: cover;
-}
-#jukkahChart {
-  background-image: url("/images/jukkah_profile.jpg");
-  background-size: cover;
-}
-#kristianChart {
-  background-image: url("/images/kristian_profile.jpg");
-  background-size: cover;
-}
-#jussiChart {
-  background-image: url("/images/jussi_profile.jpg");
-  background-size: cover;
-}
-#rikuChart {
-  background-image: url("/images/riku_profile.jpg");
-  background-size: cover;
-}
-#olliChart {
-  background-image: url("/images/olli_profile.jpg");
-  background-size: cover;
-}
-#jaakkoChart {
-  background-image: url("/images/jaakko_profile.jpg");
-  background-size: cover;
-}
-#kimmoChart {
-  background-image: url("/images/kimmo_naama.jpg");
-  background-size: cover;
-}
 @font-face {
   font-family: airstream;
   src: url("/stylesheets/Airstream-webfont.woff");
@@ -362,6 +50,318 @@ canvas {
 @media screen and (min-width: 998px) {
   #mobile {
     display: none;
+  }
+  a {
+    color: #00b7ff;
+  }
+  a {
+    text-decoration: none;
+  }
+  #menu li {
+    display: inline-block;
+    margin: 10px;
+    background: rgba(0,0,0,0.8);
+  }
+  #menu li {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    min-width: 150px;
+    text-align: center;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+  }
+  #menu li.active {
+    background: rgba(255,255,255,0.8);
+    color: #fff;
+  }
+  #menu li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #menu li .aMas:hover {
+    background: rgba(29,141,204,0.9);
+    border-radius: 10px;
+  }
+  #menu li .aCon:hover {
+    background: rgba(255,66,61,0.9);
+    border-radius: 10px;
+  }
+  #menu li.active .aMas:hover {
+    background: rgba(29,141,204,0.9);
+    border-radius: 10px;
+  }
+  #menu li.active .aCon:hover {
+    background: rgba(255,66,61,0.9);
+    border-radius: 10px;
+  }
+  #menu li a,
+  #menu li.active a {
+    padding: 9px 18px;
+    display: block;
+  }
+  #menu li.active a {
+    color: #000;
+  }
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+  }
+  #section1,
+  #section2,
+  #section3,
+  #section4 {
+    background-size: cover;
+    background-image: url("/images/bballtexture.png");
+  }
+  #page1h1 {
+    z-index: 1;
+    position: absolute;
+    left: 45%;
+    bottom: 50%;
+    text-align: center;
+  }
+  .fltext {
+    z-index: 1;
+    position: absolute;
+    top: 80px;
+    background: rgba(255,255,255,0.5);
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+  }
+  #section1 #pheader {
+    text-align: center;
+  }
+  #pheader {
+    width: 98%;
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.79);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10px;
+    font-size: 5.5em;
+    display: none;
+    border-radius: 15px;
+    margin-left: 13px;
+    font-family: airstream;
+    color: rgba(211,211,211,0.79);
+  }
+  .masTeam div .thumbnail:hover {
+    border-color: #fff;
+  }
+  .conTeam div .thumbnail:hover {
+    border-color: #fff;
+  }
+  .masContainer {
+    position: relative;
+    background: rgba(195,200,202,0.94);
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .conContainer {
+    position: relative;
+    background: rgba(195,200,202,0.94);
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .masTeamText {
+    position: absolute;
+    font-family: airstream;
+    margin-top: 55px;
+  }
+  .conTeamText {
+    position: absolute;
+    font-family: airstream;
+  }
+  .thumbnailTextMas {
+    opacity: 0;
+    color: #fff;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .thumbnailTextCon {
+    opacity: 0;
+    color: #fff;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .thumbnailTextMas:hover {
+    background-color: #1d8dcc;
+    font-family: airstream;
+    font-size: 1.3em;
+    opacity: 1;
+    border-radius: 3px;
+  }
+  .thumbnailTextCon:hover {
+    background-color: #ff423d;
+    font-family: airstream;
+    font-size: 1.5em;
+    opacity: 1;
+    border-radius: 3px;
+  }
+  div .thumbnail {
+    background: none;
+    border-width: 0px;
+  }
+  .photoContainer {
+    position: relative;
+    text-align: center;
+    background: rgba(255,255,255,0.2) !important;
+  }
+  .playerBox img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+  }
+  .well.masTeam {
+    margin-top: 55px;
+    border-color: #1d8dcc;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    position: relative;
+    background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
+/* Chrome10+,Safari5.1+ */
+  }
+  .well.conTeam {
+    border-color: #ff423d;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
+/* Chrome10+,Safari5.1+ */
+  }
+  .well.playerBox {
+    font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+    color: #fff;
+    overflow: auto;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 0px;
+  }
+  .well.masB {
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(125,126,125,0.9) 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
+/* Chrome10+,Safari5.1+ */
+  }
+  .well.conB {
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(125,126,125,0.9) 0%, rgba(14,14,14,0.6) 58%, #0e0e0e 100%);
+/* Chrome10+,Safari5.1+ */
+  }
+  .playerStats {
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+  }
+  .playerBox ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  .playerBox ul li {
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.73);
+  }
+  .mas {
+    color: #fff;
+  }
+  .con {
+    color: #000;
+  }
+  canvas {
+    margin-top: 20px;
+    float: right;
+    height: auto !important;
+    width: 100% !important;
+    border-radius: 10px;
+  }
+  .playerPhoto {
+    float: left;
+    border-radius: 10px;
+  }
+  .frame {
+    white-space: nowrap;
+    padding: 0px;
+  }
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .row {
+    margin-left: 0px !important;
+  }
+  #mikkoChart {
+    background-image: url("/images/mikko_profile.jpg");
+    background-size: cover;
+  }
+  #tuomasChart {
+    background-image: url("/images/tuomas_profile.jpg");
+    background-size: cover;
+  }
+  #petteriChart {
+    background-image: url("/images/petteri_profile.jpg");
+    background-size: cover;
+  }
+  #jukkaChart {
+    background-image: url("/images/jukka_profile.jpg");
+    background-size: cover;
+  }
+  #jukkahChart {
+    background-image: url("/images/jukkah_profile.jpg");
+    background-size: cover;
+  }
+  #kristianChart {
+    background-image: url("/images/kristian_profile.jpg");
+    background-size: cover;
+  }
+  #jussiChart {
+    background-image: url("/images/jussi_profile.jpg");
+    background-size: cover;
+  }
+  #rikuChart {
+    background-image: url("/images/riku_profile.jpg");
+    background-size: cover;
+  }
+  #olliChart {
+    background-image: url("/images/olli_profile.jpg");
+    background-size: cover;
+  }
+  #jaakkoChart {
+    background-image: url("/images/jaakko_profile.jpg");
+    background-size: cover;
+  }
+  #kimmoChart {
+    background-image: url("/images/kimmo_naama.jpg");
+    background-size: cover;
   }
 }
 @media screen and (max-width: 998px) {

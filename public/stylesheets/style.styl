@@ -34,352 +34,6 @@ body
   height: 100% !important
   position: absolute
   bottom: 0
-//menu stuff
-a
-  color: #00B7FF
-a
-	text-decoration:none;
-#menu li
-  display: inline-block
-  margin: 10px
-  background: rgba(0,0,0, 0.8)
-#menu li
-  -webkit-border-radius: 10px
-  border-radius: 10px
-  min-width: 150px
-  text-align: center
-  //new background
-  border-color: white
-  border-style:solid
-  border-width: 1px
-#menu li.active
-  // background: #fff
-  background: rgba(255,255,255, 0.8)
-  color: #fff
-#menu li a
-  text-decoration: none
-  color: #fff
-#menu li .aMas:hover
-  background: rgba(29, 141, 204, 0.9)
-  border-radius: 10px
-#menu li .aCon:hover
-  background: rgba(255, 66, 61, 0.9)
-  border-radius: 10px
-#menu li.active .aMas:hover
-  background: rgba(29, 141, 204, 0.9)
-  border-radius: 10px
-#menu li.active .aCon:hover
-  background: rgba(255, 66, 61, 0.9)
-  border-radius: 10px
-#menu li a,
-#menu li.active a
-  padding: 9px 18px
-  display:block
-#menu li.active a
-  color: #000
-#menu
-  position: fixed
-  top: 0
-  left: 0
-  height: 40px
-  z-index: 70
-  width: 100%
-  padding-left: 5px
-  padding-right: 5px
-  margin: 0
-
-// fullPage stuff
-#section1, #section2, #section3, #section4
-  background-size: cover
-  background-image: url("/images/bballtexture.png")
-
-#page1h1
-  z-index 1;
-  position: absolute;
-  left: 45%
-  bottom: 50%
-  text-align: center;
-
-.fltext
-  z-index 1
-  position: absolute
-  top: 80px
-  background: rgba(255,255,255, 0.5)
-  -moz-border-radius-topright: 10px
-  -webkit-border-top-right-radius: 10px
-  border-top-right-radius: 10px
-  border-bottom-right-radius: 10px
-  -moz-border-radius-bottomright: 10px
-  -webkit-border-bottom-right-radius: 10px
-
-#section1 #pheader
-  text-align: center
-#pheader
-  width: 98%
-  // bottom: 0
-  top: 0
-  // margin-top: 75px
-  position: fixed
-  // background: rgba(29, 141, 204, 0.79)
-  background: rgba(0, 0, 0, 0.79)
-  padding-left: 5%
-  padding-right: 5%
-  padding-bottom: 10px
-  font-size: 5.5em
-  display: none
-  // margin-top: 75px
-  // margin-top: 45px
-  border-radius: 15px
-  margin-left: 13px
-  font-family: airstream;
-  color: rgba(211, 211, 211, 0.79)
-
-/////////////////////////////////////////////
-/////////     Rosters    ////////////////////
-/////////////////////////////////////////////
-    
-.masTeam div .thumbnail:hover
-  border-color: #ffffff
-
-.conTeam div .thumbnail:hover
-  border-color: #ffffff
-
-.masContainer
-  position: relative
-  background: rgba(195, 200, 202, 0.94)
-  border-radius: 20px
-  border-bottom-right-radius: 0px
-  border-bottom-left-radius: 0px
-
-.conContainer
-  position: relative
-  background: rgba(195, 200, 202, 0.94)
-  border-radius: 20px
-  border-top-right-radius: 0px
-  border-top-left-radius: 0px
-
-.masTeamText
-  position: absolute
-  font-family: airstream
-  // padding-top: 10%
-  margin-top: 55px
-
-.conTeamText
-  position: absolute
-  font-family: airstream
-
-
-.thumbnailTextMas
-  // padding-top: 20%
-  opacity: 0
-  color: white
-  top: 0
-  left: 0
-  position: absolute
-  width: 100%
-  height: 100%
-
-.thumbnailTextCon
-  opacity: 0
-  color: white
-  top: 0
-  left: 0
-  position: absolute
-  width: 100%
-  height: 100%
-
-.thumbnailTextMas:hover
-  background-color: rgba(29, 141, 204, 1)
-  font-family: airstream;
-  font-size: 1.3em
-  opacity: 1
-  border-radius: 3px
-.thumbnailTextCon:hover
-  background-color: rgba(255, 66, 61, 1)
-  font-family: airstream;
-  font-size: 1.5em
-  opacity: 1
-  border-radius: 3px
-
-div .thumbnail
-  background: none
-  border-width: 0px
-.photoContainer
-  position: relative
-  text-align: center
-  background: rgba(255, 255, 255, 0.2) !important
-  // max-width: 12.5% !important
-  // display: inline-block
-  // min-height: 1px
-  // padding-right: 15px
-  // padding-left: 15px
-
-
-.playerBox img
-  vertical-align: middle
-  width: 100%
-  height: 100%
-
-.well.masTeam
-  margin-top: 55px
-  border-color: rgba(29, 141, 204, 1)
-  border-style: solid
-  border-width: 5px
-  border-radius: 20px
-  position: relative
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,0.8) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
-
-
-
-.well.conTeam
-  border-color: rgba(255, 66, 61, 1)
-  border-style: solid
-  border-width: 5px
-  border-radius: 20px
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,0.8) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
-
-/////////////////////////////////////////////
-/////////     Player Stats    ///////////////
-/////////////////////////////////////////////
-
-.well.playerBox
-  font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
-  color: #ffffff
-  overflow:auto
-  border-style: solid
-  border-radius:20px
-  border-width: 2px
-  // background: rgb(238,238,238); /* Old browsers */
-  // background: -webkit-linear-gradient(top,  rgba(238,238,238,0.9) 0%,rgba(204,204,204,0.9) 100%); /* Chrome10+,Safari5.1+ */
-  //background: -webkit-linear-gradient(top,  rgba(238,238,238,0.9) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
-  // background: -webkit-linear-gradient(top,  rgba(238,238,238,0.95) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
-  // background: -webkit-linear-gradient(top,  rgba(225,255,255,0.95) 0%,rgba(253,255,255,0.96) 15%,rgba(230,248,253,0.97) 30%,rgba(200,238,251,0.98) 54%,rgba(190,228,248,0.99) 75%,rgba(177,216,245,1) 100%); /* Chrome10+,Safari5.1+ */
-  //   background: -webkit-linear-gradient(top,  rgba(247,251,252,0.95) 0%,rgba(229,246,255,0.97) 40%,rgba(193,221,255,1) 100%); /* Chrome10+,Safari5.1+ */
-  //   background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
-  // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,0.1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
-  //background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
-  // background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* Opera 12+ */
-  // background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
-  // background: radial-gradient(ellipse at center,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* W3C */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  margin-top: 45px
-  margin-bottom: 20px
-  margin-left: 60px
-  margin-right: 60px
-  padding: 0px
-
-.well.masB
-  //background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%, rgba(14,14,14,0.71) 58%, rgba(14,14,14,1) 100%); /* FF3.6+ */
-  //background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,0.3)), color-stop(58%,rgba(14,14,14,0.71)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.8) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
-  // background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* Opera 12+ */
-  // background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* IE10+ */
-  // background: radial-gradient(ellipse at center,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* W3C */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-.well.conB
-  //   background: -moz-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%, rgba(143,2,34,0.92) 18%, rgba(86,43,44,1) 100%); /* FF3.6+ */
-  // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(169,3,41,0.9)), color-stop(18%,rgba(143,2,34,0.92)), color-stop(100%,rgba(86,43,44,1))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.6) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
-  // background: -o-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* Opera 12+ */
-  // background: -ms-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* IE10+ */
-  // background: radial-gradient(ellipse at center,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* W3C */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6a90329', endColorstr='#562b2c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-.playerStats
-  text-align: left
-  vertical-align: middle
-  width: 100%
-  height: 100%
-
-.playerBox ul
-  list-style-type:none
-  padding-left: 0px
-
-
-.playerBox ul li
-  border-top-width: 0px
-  border-left-width: 0px
-  border-right-width: 0px
-  border-bottom-width: 1px
-  border-style: solid
-  border-color: rgba(255, 255, 255, 0.73)
-
-.mas
-  color: #ffffff
-.con
-  color: #000000
-
-canvas
-  margin-top: 20px
-  float: right
-  height: auto !important
-  width: 100% !important
-  border-radius: 10px
-
-.playerPhoto
-  float: left
-  border-radius: 10px
-
-.frame
-    // height: 100%  messes up chrome
-    white-space: nowrap
-    padding: 0px
-    // text-align: center
-
-.helper
-    display: inline-block
-    height: 100%
-    vertical-align: middle
-
-// .masBorder
-//     border-style: solid
-//     border-right-color: #ff6f0f
-//     border-top-width: 0px
-//     border-right-width: medium
-//     border-bottom-width: 0px
-//     border-left-width: 0px
-.row
-  margin-left: 0px !important
-
-
-
-// #mikaChart
-//   background-image: url("/images/mika_profile.jpg")
-//   background-size: cover
-#mikkoChart
-  background-image: url("/images/mikko_profile.jpg")
-  background-size: cover
-#tuomasChart
-  background-image: url("/images/tuomas_profile.jpg")
-  background-size: cover
-#petteriChart
-  background-image: url("/images/petteri_profile.jpg")
-  background-size: cover
-#jukkaChart
-  background-image: url("/images/jukka_profile.jpg")
-  background-size: cover
-#jukkahChart
-  background-image: url("/images/jukkah_profile.jpg")
-  background-size: cover
-#kristianChart
-  background-image: url("/images/kristian_profile.jpg")
-  background-size: cover
-#jussiChart
-  background-image: url("/images/jussi_profile.jpg")
-  background-size: cover
-#rikuChart
-  background-image: url("/images/riku_profile.jpg")
-  background-size: cover
-#olliChart
-  background-image: url("/images/olli_profile.jpg")
-  background-size: cover
-#jaakkoChart
-  background-image: url("/images/jaakko_profile.jpg")
-  background-size: cover
-
-#kimmoChart
-  background-image: url("/images/kimmo_naama.jpg")
-  background-size: cover
 
 @font-face {
     font-family: airstream;
@@ -392,6 +46,353 @@ canvas
 @media screen and (min-width: 998px)
   #mobile
     display: none
+  //menu stuff
+  a
+    color: #00B7FF
+  a
+    text-decoration:none;
+  #menu li
+    display: inline-block
+    margin: 10px
+    background: rgba(0,0,0, 0.8)
+  #menu li
+    -webkit-border-radius: 10px
+    border-radius: 10px
+    min-width: 150px
+    text-align: center
+    //new background
+    border-color: white
+    border-style:solid
+    border-width: 1px
+  #menu li.active
+    // background: #fff
+    background: rgba(255,255,255, 0.8)
+    color: #fff
+  #menu li a
+    text-decoration: none
+    color: #fff
+  #menu li .aMas:hover
+    background: rgba(29, 141, 204, 0.9)
+    border-radius: 10px
+  #menu li .aCon:hover
+    background: rgba(255, 66, 61, 0.9)
+    border-radius: 10px
+  #menu li.active .aMas:hover
+    background: rgba(29, 141, 204, 0.9)
+    border-radius: 10px
+  #menu li.active .aCon:hover
+    background: rgba(255, 66, 61, 0.9)
+    border-radius: 10px
+  #menu li a,
+  #menu li.active a
+    padding: 9px 18px
+    display:block
+  #menu li.active a
+    color: #000
+  #menu
+    position: fixed
+    top: 0
+    left: 0
+    height: 40px
+    z-index: 70
+    width: 100%
+    padding-left: 5px
+    padding-right: 5px
+    margin: 0
+
+  // fullPage stuff
+  #section1, #section2, #section3, #section4
+    background-size: cover
+    background-image: url("/images/bballtexture.png")
+
+  #page1h1
+    z-index 1;
+    position: absolute;
+    left: 45%
+    bottom: 50%
+    text-align: center;
+
+  .fltext
+    z-index 1
+    position: absolute
+    top: 80px
+    background: rgba(255,255,255, 0.5)
+    -moz-border-radius-topright: 10px
+    -webkit-border-top-right-radius: 10px
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+    -moz-border-radius-bottomright: 10px
+    -webkit-border-bottom-right-radius: 10px
+
+  #section1 #pheader
+    text-align: center
+  #pheader
+    width: 98%
+    // bottom: 0
+    top: 0
+    // margin-top: 75px
+    position: fixed
+    // background: rgba(29, 141, 204, 0.79)
+    background: rgba(0, 0, 0, 0.79)
+    padding-left: 5%
+    padding-right: 5%
+    padding-bottom: 10px
+    font-size: 5.5em
+    display: none
+    // margin-top: 75px
+    // margin-top: 45px
+    border-radius: 15px
+    margin-left: 13px
+    font-family: airstream;
+    color: rgba(211, 211, 211, 0.79)
+
+  /////////////////////////////////////////////
+  /////////     Rosters    ////////////////////
+  /////////////////////////////////////////////
+      
+  .masTeam div .thumbnail:hover
+    border-color: #ffffff
+
+  .conTeam div .thumbnail:hover
+    border-color: #ffffff
+
+  .masContainer
+    position: relative
+    background: rgba(195, 200, 202, 0.94)
+    border-radius: 20px
+    border-bottom-right-radius: 0px
+    border-bottom-left-radius: 0px
+
+  .conContainer
+    position: relative
+    background: rgba(195, 200, 202, 0.94)
+    border-radius: 20px
+    border-top-right-radius: 0px
+    border-top-left-radius: 0px
+
+  .masTeamText
+    position: absolute
+    font-family: airstream
+    // padding-top: 10%
+    margin-top: 55px
+
+  .conTeamText
+    position: absolute
+    font-family: airstream
+
+
+  .thumbnailTextMas
+    // padding-top: 20%
+    opacity: 0
+    color: white
+    top: 0
+    left: 0
+    position: absolute
+    width: 100%
+    height: 100%
+
+  .thumbnailTextCon
+    opacity: 0
+    color: white
+    top: 0
+    left: 0
+    position: absolute
+    width: 100%
+    height: 100%
+
+  .thumbnailTextMas:hover
+    background-color: rgba(29, 141, 204, 1)
+    font-family: airstream;
+    font-size: 1.3em
+    opacity: 1
+    border-radius: 3px
+  .thumbnailTextCon:hover
+    background-color: rgba(255, 66, 61, 1)
+    font-family: airstream;
+    font-size: 1.5em
+    opacity: 1
+    border-radius: 3px
+
+  div .thumbnail
+    background: none
+    border-width: 0px
+  .photoContainer
+    position: relative
+    text-align: center
+    background: rgba(255, 255, 255, 0.2) !important
+    // max-width: 12.5% !important
+    // display: inline-block
+    // min-height: 1px
+    // padding-right: 15px
+    // padding-left: 15px
+
+
+  .playerBox img
+    vertical-align: middle
+    width: 100%
+    height: 100%
+
+  .well.masTeam
+    margin-top: 55px
+    border-color: rgba(29, 141, 204, 1)
+    border-style: solid
+    border-width: 5px
+    border-radius: 20px
+    position: relative
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,0.8) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+
+
+
+  .well.conTeam
+    border-color: rgba(255, 66, 61, 1)
+    border-style: solid
+    border-width: 5px
+    border-radius: 20px
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,0.8) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+
+  /////////////////////////////////////////////
+  /////////     Player Stats    ///////////////
+  /////////////////////////////////////////////
+
+  .well.playerBox
+    font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+    color: #ffffff
+    overflow:auto
+    border-style: solid
+    border-radius:20px
+    border-width: 2px
+    // background: rgb(238,238,238); /* Old browsers */
+    // background: -webkit-linear-gradient(top,  rgba(238,238,238,0.9) 0%,rgba(204,204,204,0.9) 100%); /* Chrome10+,Safari5.1+ */
+    //background: -webkit-linear-gradient(top,  rgba(238,238,238,0.9) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+    // background: -webkit-linear-gradient(top,  rgba(238,238,238,0.95) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+    // background: -webkit-linear-gradient(top,  rgba(225,255,255,0.95) 0%,rgba(253,255,255,0.96) 15%,rgba(230,248,253,0.97) 30%,rgba(200,238,251,0.98) 54%,rgba(190,228,248,0.99) 75%,rgba(177,216,245,1) 100%); /* Chrome10+,Safari5.1+ */
+    //   background: -webkit-linear-gradient(top,  rgba(247,251,252,0.95) 0%,rgba(229,246,255,0.97) 40%,rgba(193,221,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    //   background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,0.1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    //background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    // background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* Opera 12+ */
+    // background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    // background: radial-gradient(ellipse at center,  rgba(125,126,125,0.1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin-top: 45px
+    margin-bottom: 20px
+    margin-left: 60px
+    margin-right: 60px
+    padding: 0px
+
+  .well.masB
+    //background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%, rgba(14,14,14,0.71) 58%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    //background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,0.3)), color-stop(58%,rgba(14,14,14,0.71)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.8) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    // background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* Opera 12+ */
+    // background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* IE10+ */
+    // background: radial-gradient(ellipse at center,  rgba(125,126,125,0.3) 0%,rgba(14,14,14,0.71) 58%,rgba(14,14,14,1) 100%); /* W3C */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .well.conB
+    //   background: -moz-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%, rgba(143,2,34,0.92) 18%, rgba(86,43,44,1) 100%); /* FF3.6+ */
+    // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(169,3,41,0.9)), color-stop(18%,rgba(143,2,34,0.92)), color-stop(100%,rgba(86,43,44,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.6) 58%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    // background: -o-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* Opera 12+ */
+    // background: -ms-radial-gradient(center, ellipse cover,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* IE10+ */
+    // background: radial-gradient(ellipse at center,  rgba(169,3,41,0.9) 0%,rgba(143,2,34,0.92) 18%,rgba(86,43,44,1) 100%); /* W3C */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6a90329', endColorstr='#562b2c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  .playerStats
+    text-align: left
+    vertical-align: middle
+    width: 100%
+    height: 100%
+
+  .playerBox ul
+    list-style-type:none
+    padding-left: 0px
+
+
+  .playerBox ul li
+    border-top-width: 0px
+    border-left-width: 0px
+    border-right-width: 0px
+    border-bottom-width: 1px
+    border-style: solid
+    border-color: rgba(255, 255, 255, 0.73)
+
+  .mas
+    color: #ffffff
+  .con
+    color: #000000
+
+  canvas
+    margin-top: 20px
+    float: right
+    height: auto !important
+    width: 100% !important
+    border-radius: 10px
+
+  .playerPhoto
+    float: left
+    border-radius: 10px
+
+  .frame
+      // height: 100%  messes up chrome
+      white-space: nowrap
+      padding: 0px
+      // text-align: center
+
+  .helper
+      display: inline-block
+      height: 100%
+      vertical-align: middle
+
+  // .masBorder
+  //     border-style: solid
+  //     border-right-color: #ff6f0f
+  //     border-top-width: 0px
+  //     border-right-width: medium
+  //     border-bottom-width: 0px
+  //     border-left-width: 0px
+  .row
+    margin-left: 0px !important
+
+
+
+  // #mikaChart
+  //   background-image: url("/images/mika_profile.jpg")
+  //   background-size: cover
+  #mikkoChart
+    background-image: url("/images/mikko_profile.jpg")
+    background-size: cover
+  #tuomasChart
+    background-image: url("/images/tuomas_profile.jpg")
+    background-size: cover
+  #petteriChart
+    background-image: url("/images/petteri_profile.jpg")
+    background-size: cover
+  #jukkaChart
+    background-image: url("/images/jukka_profile.jpg")
+    background-size: cover
+  #jukkahChart
+    background-image: url("/images/jukkah_profile.jpg")
+    background-size: cover
+  #kristianChart
+    background-image: url("/images/kristian_profile.jpg")
+    background-size: cover
+  #jussiChart
+    background-image: url("/images/jussi_profile.jpg")
+    background-size: cover
+  #rikuChart
+    background-image: url("/images/riku_profile.jpg")
+    background-size: cover
+  #olliChart
+    background-image: url("/images/olli_profile.jpg")
+    background-size: cover
+  #jaakkoChart
+    background-image: url("/images/jaakko_profile.jpg")
+    background-size: cover
+
+  #kimmoChart
+    background-image: url("/images/kimmo_naama.jpg")
+    background-size: cover
+
 @media screen and (max-width: 998px)
   #fullpage, #menu
     display: none
