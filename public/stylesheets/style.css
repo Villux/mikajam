@@ -4,26 +4,30 @@ html {
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("/images/bballtexture.png");
+  background-image: url("/images/asphalt_texture.png");
 }
 #mobile {
   margin-top: 40px;
   margin-bottom: 40px;
   background: rgba(33,29,41,0.95);
+  background-size: cover;
   width: 100% !important;
-  height: 100% !important;
   display: block;
   color: #fff;
   border-radius: 20px;
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
 }
 #mobile p {
   font-family: quicksand;
 }
 .air {
   font-family: airstream;
-  font-size: 4em;
+  font-size: 3em;
+}
+.airH {
+  font-family: airstream;
+  font-size: 3.5em;
 }
 .vsContainer {
   position: relative;
@@ -355,17 +359,14 @@ canvas {
   font-family: quicksand;
   src: url("/stylesheets/Quicksand-Light.otf");
 }
-@media screen and (max-width: 600px) {
-  #video {
-    display: none;
-  }
-  #section1 {
-    background-size: cover;
-    background-image: url("/images/mika_layout.jpg");
-  }
-  canvas {
+@media screen and (min-width: 998px) {
+  #mobile {
     display: none;
   }
 }
-@media screen and (max-width: 1000px), screen and (max-height: 650px) {
+@media screen and (max-width: 998px) {
+  #fullpage,
+  #menu {
+    display: none;
+  }
 }
