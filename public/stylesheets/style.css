@@ -1,6 +1,39 @@
+html {
+  overflow: auto !important;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/bballtexture.png");
+}
+#mobile {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background: rgba(33,29,41,0.95);
+  display: block;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  font-size: medium;
+}
+#mobile p {
+  font-family: quicksand;
+}
+.air {
+  font-family: airstream;
+  font-size: 3em;
+}
+.vsContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.vsText {
+  height: 100% !important;
+  position: absolute;
+  bottom: 0;
 }
 a {
   color: #00b7ff;
@@ -317,6 +350,10 @@ canvas {
 @font-face {
   font-family: airstream;
   src: url("/stylesheets/Airstream-webfont.woff");
+}
+@font-face {
+  font-family: quicksand;
+  src: url("/stylesheets/Quicksand-Light.otf");
 }
 @media screen and (max-width: 600px) {
   #video {

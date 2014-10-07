@@ -1,107 +1,17 @@
 $(document).ready(function () {
+  $("#mobile").hide();
   $("#section4menu").click(function () {
     console.log("width:")
     console.log($(window).width());
     console.log("height:")
     console.log($(window).height());
   });
-  if ($(window).width() < 600 && $(window).height() < 500) {
-    $('#fullpage').fullpage({
-      sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
-      anchors: ['Home', 'Players', 'Rosters', 'fourthPage'],
-      menu: '#menu',
-      css3: true,
-      scrollOverflow: true,
-      afterLoad: function (anchorLink, index) {
-        if (anchorLink !== 'Rosters') {
-          $('.fadeElement').hide();
-        }
-        //using anchorLink
-        if (anchorLink === 'Players') {
-          //
-        }
-      },
-      afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-        if (anchorLink === 'Players' && slideIndex === 0) {
-          mikaChart.Bar(dataMika, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 1) {
-          mikkoChart.Bar(dataMikko, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 2) {
-          tuomasChart.Bar(dataTuomas, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 3) {
-          petteriChart.Bar(dataPetteri, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 4) {
-          jukkaChart.Bar(dataJukka, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 5) {
-          jukkahChart.Bar(dataJukkah, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 6) {
-          kristianChart.Bar(dataKristian, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 7) {
-          jussiChart.Bar(dataJussi, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 8) {
-          rikuChart.Bar(dataRiku, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 9) {
-          olliChart.Bar(dataOlli, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 10) {
-          jaakkoChart.Bar(dataJaakko, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 11) {
-          benjaminChart.Bar(dataBenjamin, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 12) {
-          kimmoChart.Bar(dataKimmo, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 13) {
-          teemuChart.Bar(dataTeemu, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 14) {
-          mikkojChart.Bar(dataMikkoj, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 15) {
-          ollisChart.Bar(dataOllis, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 16) {
-          niklasChart.Bar(dataNiklas, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 17) {
-          matiasChart.Bar(dataMatias, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 18) {
-          matiasmChart.Bar(dataMatiasm, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 19) {
-          sauliChart.Bar(dataSauli, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 20) {
-          lauriChart.Bar(dataLauri, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 21) {
-          viliChart.Bar(dataVili, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 22) {
-          jussilChart.Bar(dataJussil, options);
-        }
-
-      },
-      onSlideLeave: function (anchorLink, index, slideIndex, direction) {
-        //
-      },
-      afterResize: function() {
-        console.log("reload");
-        location.reload();
-      }
-    });
-  } else {
+  if ($(window).width() < 998) {
+    $("#fullpage").hide();
+    $("#menu").hide();
+    $("#mobile").show();
+  } 
+  else {
     $('#fullpage').fullpage({
       sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
       anchors: ['Home', 'Rosters', 'Players', 'fourthPage'],
@@ -210,28 +120,8 @@ $(document).ready(function () {
         location.reload();
       }
     });
-  }
-
-  // $('#bigtext').bigtext({
-  //   minfontsize: 72 // default is null
-  // });
-  // $('#bigtext').bigtext();
-
-  $(".fltext .slider:first").fadeIn("slow", function () {
-    $(".fltext .slider").slideDown("slow", function () {
-      $(".fltext .fader").fadeIn("slow", function () {
-        // Animation complete.
-      });
-    });
-  });
-
-
-  function iedetect(v) {
-    var r = RegExp('msie' + (!isNaN(v) ? ('\\s' + v) : ''), 'i');
-    return r.test(navigator.userAgent);
-  }
-
-  // Wait until the video meta data has loaded
+    
+    // Wait until the video meta data has loaded
   $('#section1 video').on('loadedmetadata', function () {
     console.log(screen.width);
     console.log(screen.height);
@@ -283,31 +173,14 @@ $(document).ready(function () {
       // Animation complete.
     });
   });
+  }
 
-  //chart stuff
-  var data = {
-    labels: ["Skill1", "Skill2", "Skill3", "Skill4", "Skill5"],
-    datasets: [{
-      label: "Skill",
-      fillColor: "rgba(220,220,220,0.5)",
-      strokeColor: "rgba(220,220,220,1)",
-      pointColor: "rgba(220,220,220,1)",
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [65, 59, 90, 81, 56]
-    }, {
-      label: "My Second dataset",
-      fillColor: "rgba(151,187,205,0.5)",
-      strokeColor: "rgba(151,187,205,1)",
-      pointColor: "rgba(151,187,205,1)",
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [28, 48, 40, 19, 96]
-    }]
-  };
+  function iedetect(v) {
+    var r = RegExp('msie' + (!isNaN(v) ? ('\\s' + v) : ''), 'i');
+    return r.test(navigator.userAgent);
+  }
 });
+
 var optionsM = {
   datasetStrokeWidth: 2,
   scaleShowLabels: true,
