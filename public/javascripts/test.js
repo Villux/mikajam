@@ -14,7 +14,7 @@ $(document).ready(function () {
   else {
     $('#fullpage').fullpage({
       sectionsColor: ['#525252', '#525252', '#525252', '#525252'],
-      anchors: ['Home', 'Rosters', 'Players', 'fourthPage'],
+      anchors: ['Home', 'Info', 'Rosters', 'Players'],
       menu: '#menu',
       css3: true,
       scrollOverflow: false,

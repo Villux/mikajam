@@ -316,49 +316,36 @@ body {
   .row {
     margin-left: 0px !important;
   }
-  #mikkoChart {
-    background-image: url("/images/mikko_profile.jpg");
+  #infoPage {
+    margin-top: 55px;
+    background: rgba(33,29,41,0.95);
     background-size: cover;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 20px;
   }
-  #tuomasChart {
-    background-image: url("/images/tuomas_profile.jpg");
-    background-size: cover;
+  #infoPage p {
+    font-family: quicksand;
   }
-  #petteriChart {
-    background-image: url("/images/petteri_profile.jpg");
-    background-size: cover;
+  .air-F {
+    font-family: airstream;
+    font-size: 2.2em;
   }
-  #jukkaChart {
-    background-image: url("/images/jukka_profile.jpg");
-    background-size: cover;
+  .airH-F {
+    font-family: airstream;
+    font-size: 2.9em;
   }
-  #jukkahChart {
-    background-image: url("/images/jukkah_profile.jpg");
-    background-size: cover;
+  .vsContainer-F {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
   }
-  #kristianChart {
-    background-image: url("/images/kristian_profile.jpg");
-    background-size: cover;
-  }
-  #jussiChart {
-    background-image: url("/images/jussi_profile.jpg");
-    background-size: cover;
-  }
-  #rikuChart {
-    background-image: url("/images/riku_profile.jpg");
-    background-size: cover;
-  }
-  #olliChart {
-    background-image: url("/images/olli_profile.jpg");
-    background-size: cover;
-  }
-  #jaakkoChart {
-    background-image: url("/images/jaakko_profile.jpg");
-    background-size: cover;
-  }
-  #kimmoChart {
-    background-image: url("/images/kimmo_naama.jpg");
-    background-size: cover;
+  .vsText-F {
+    height: 100% !important;
+    position: absolute;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 998px) {

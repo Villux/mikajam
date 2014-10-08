@@ -18,12 +18,12 @@ html
     ul(id="menu" class="container")
       li(data-menuanchor="Home", class="active ")
         a(href="#Home" class="aMas") Home
-      li(data-menuanchor="Rosters" class="")
-        a(href="#Rosters" class="aMas") Rosters
-      li(data-menuanchor="fourthPage" class="pull-right")
-        a(href="#fourthPage" class="aCon" id="section4menu") Fourth section
+      li(data-menuanchor="Info" class="")
+        a(href="#Info" class="aMas") Info
       li(data-menuanchor="Players" class="pull-right")
         a(href="#Players" class="aCon") Players Stats
+      li(data-menuanchor="Rosters" class="pull-right")
+        a(href="#Rosters" class="aCon") Rosters
 
     div(id="mobile" class="container")
       h1.col-xs-12.airH MikaJam
@@ -46,7 +46,22 @@ html
           source(src="/images/video/layupgopro.mp4" type="video/mp4")
           source(src="/images/video/layupgopro.webmhd.webm" type="video/webm")
         h1#pheader <br>MikaJam 20.12.2014 12:00 @ Vehkoja
-      div.section#section2.container
+      div.section#section2
+        div(id="infoPage" class="container col-md-10 col-md-offset-1")
+          h1.col-md-12.airH-F MikaJam 20.12 12:00 @ Vehkoja
+          div.col-md-8.vsContainer-F.col-md-offset-2
+            div.col-md-5
+              img(src="/images/mikasallstars2.png"  class="col-xs-12")
+            div.col-md-2.vsText-F.air-F
+              h1 VS
+            div.col-md-5
+              img(src="/images/contnders_logo.png"  class="col-xs-12")
+          div.clearfix
+          h2.col-md-12.air-F What's the Jam?
+          p Tänä vuonna jo seitsemättä kertaa järjestettävä MikaJam on oodi koripallolle, hauskanpidolle ja ennen kaikkea ystävyydelle. Tapahtuman juuret juontavat  syvälle Hyvinkään Sveitsin lukion liikuntasaliin jossa ensimmäinen koripallopeli pelattiin Mika Linnaluoman syntymäpäivänä - tästä myös tapahtuma sai nimensä. 
+          p Vaikka Jamit ovatkin rakentuneet vanhojen HyPo -pelaajien ympärille, kentällä nähdään myös  eri lajien edustajia - jääkiekosta curlingiin. Intohimo urheilua ja lajia kohtaan näkyy kentällä ja tuntuu katsomossa. Tapahtuma ei ole osa meitä - me olemme tapahtuma. 
+          h2.air-F We are MikaJam
+      div.section#section3.container
         div.masContainer.col-md-12.row
           div.well.masTeam.col-md-9.pull-left
             div.col-md-3
@@ -207,7 +222,7 @@ html
                     p.thumbnailTextCon Benjamin<br>Kokkonen
                     img(src="/images/molsa_profile.png" alt="..." class="img-rounded")
                 div.col-md-6
-      div.section#section3
+      div.section#section4
         // Mika Linnaluoma
         div.slide.container
           div(class="well playerBox masB")
@@ -452,6 +467,4 @@ html
         //-       |Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja ladontateollisuudet käyttävät. Lorem Ipsum on ollut teollisuuden normaali testausteksti jo 1500-luvulta asti, jolloin tuntematon tulostaja otti kaljuunan ja sekoitti sen tehdäkseen esimerkkikirjan. Se ei ole selvinnyt vain viittä vuosisataa, mutta myös loikan elektroniseen kirjoitukseen, jääden suurinpiirtein muuntamattomana. Se tuli kuuluisuuteen 1960-luvulla kun Letraset-paperiarkit, joissa oli Lorem Ipsum pätkiä, julkaistiin ja vielä myöhemmin tietokoneen julkistusohjelmissa, kuten Aldus PageMaker joissa oli versioita Lorem Ipsumista.
         //-     p |Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja ladontateollisuudet käyttävät. Lorem Ipsum on ollut teollisuuden normaali testausteksti jo 1500-luvulta asti, jolloin tuntematon tulostaja otti kaljuunan ja sekoitti sen tehdäkseen esimerkkikirjan. Se ei ole selvinnyt vain viittä vuosisataa, mutta myös loikan elektroniseen kirjoitukseen, jääden suurinpiirtein muuntamattomana. Se tuli kuuluisuuteen 1960-luvulla kun Letraset-paperiarkit, joissa oli Lorem Ipsum pätkiä, julkaistiin ja vielä myöhemmin tietokoneen julkistusohjelmissa, kuten Aldus PageMaker joissa oli versioita Lorem Ipsumista.
 
-      div.section#section4
-        canvas(id="chart" width="500px" height="500px")
 script(src="/javascripts/test.js")
