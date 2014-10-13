@@ -316,6 +316,7 @@ $(document).ready(function () {
     
     // Wait until the video meta data has loaded
   $('#section1 video').on('loadedmetadata', function () {
+    console.log("täällä");
     var x = $(window).height();
     var y = $(window).width();
     if (screen.width <= 1200) {
