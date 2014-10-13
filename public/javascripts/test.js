@@ -1,11 +1,5 @@
 $(document).ready(function () {
   $("#mobile").hide();
-  $("#section4menu").click(function () {
-    console.log("width:")
-    console.log($(window).width());
-    console.log("height:")
-    console.log($(window).height());
-  });
   if ($(window).width() < 998) {
     $("#fullpage").hide();
     $("#menu").hide();
@@ -34,12 +28,215 @@ $(document).ready(function () {
       },
       afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
         if (anchorLink === 'Players' && slideIndex === 0) {}
+        // Mikko
         if (anchorLink === 'Players' && slideIndex === 1) {
+          if (!mikkoChart) {
+            var canvas = document.getElementById('mikkoChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("mikkoChart").getContext("2d");
+            mikkoChart = new Chart(ctx);
+          }
+          mikkoChart.Bar(dataMikko, optionsM);
+        }
+        //tuomas
+        if (anchorLink === 'Players' && slideIndex === 2) {
+          if (!tuomasChart) {
+            var canvas = document.getElementById('tuomasChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("tuomasChart").getContext("2d");
+            tuomasChart = new Chart(ctx);
+          }
+          tuomasChart.Bar(dataTuomas, optionsM);
+        }
+        //petteri
+        if (anchorLink === 'Players' && slideIndex === 3) {
+          if (!petteriChart) {
+            var canvas = document.getElementById('petteriChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("petteriChart").getContext("2d");
+            petteriChart = new Chart(ctx);
+          }
+          petteriChart.Bar(dataPetteri, optionsM);
+        }
+        // jukka
+        if (anchorLink === 'Players' && slideIndex === 4) {
+          if (!jukkaChart) {
+            var canvas = document.getElementById('jukkaChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("jukkaChart").getContext("2d");
+            jukkaChart = new Chart(ctx);
+          }
+          jukkaChart.Bar(dataJukka, optionsM);
+        }
+        // jukkah
+        if (anchorLink === 'Players' && slideIndex === 5) {
+          if (!jukkahChart) {
+            var canvas = document.getElementById('jukkahChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("jukkahChart").getContext("2d");
+            jukkahChart = new Chart(ctx);
+          }
+          jukkahChart.Bar(dataJukkah, optionsM);
+        }
+        // kristian
+        if (anchorLink === 'Players' && slideIndex === 6) {
+          if (!kristianChart) {
+            var canvas = document.getElementById('kristianChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("kristianChart").getContext("2d");
+            kristianChart = new Chart(ctx);
+          }
+          kristianChart.Bar(dataKristian, optionsM);
+        }
+        // jussi
+        if (anchorLink === 'Players' && slideIndex === 7) {
+          if (!jussiChart) {
+            var canvas = document.getElementById('jussiChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("jussiChart").getContext("2d");
+            jussiChart = new Chart(ctx);
+          }
+          jussiChart.Bar(dataJussi, optionsM);
+        }
+        // riku
+        if (anchorLink === 'Players' && slideIndex === 8) {
+          if (!rikuChart) {
+            var canvas = document.getElementById('rikuChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("rikuChart").getContext("2d");
+            rikuChart = new Chart(ctx);
+          }
+          rikuChart.Bar(dataRiku, optionsM);
+        }
+        // olli
+        if (anchorLink === 'Players' && slideIndex === 9) {
+          if (!olliChart) {
+            var canvas = document.getElementById('olliChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("olliChart").getContext("2d");
+            olliChart = new Chart(ctx);
+          }
+          olliChart.Bar(dataOlli, optionsM);
+        }
+        // jaakko
+        if (anchorLink === 'Players' && slideIndex === 10) {
+          if (!jaakkoChart) {
+            var canvas = document.getElementById('jaakkoChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("jaakkoChart").getContext("2d");
+            jaakkoChart = new Chart(ctx);
+          }
+          jaakkoChart.Bar(dataJaakko, optionsM);
+        }
+        // kimmo
+        if (anchorLink === 'Players' && slideIndex === 11) {
+          if (!kimmoChart) {
+            var canvas = document.getElementById('kimmoChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("kimmoChart").getContext("2d");
+            kimmoChart = new Chart(ctx);
+          }
+          kimmoChart.Bar(dataKimmo, optionsC);
+        }
+        // teemu
+        if (anchorLink === 'Players' && slideIndex === 12) {
+          if (!teemuChart) {
+            var canvas = document.getElementById('teemuChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("teemuChart").getContext("2d");
+            teemuChart = new Chart(ctx);
+          }
+          teemuChart.Bar(dataTeemu, optionsC);
+        }
+        // mikkoj
+        if (anchorLink === 'Players' && slideIndex === 13) {
+          if (!mikkojChart) {
+            var canvas = document.getElementById('mikkojChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("mikkojChart").getContext("2d");
+            mikkojChart = new Chart(ctx);
+          }
+          mikkojChart.Bar(dataMikkoj, optionsC);
+        }
+        // ollis
+        if (anchorLink === 'Players' && slideIndex === 14) {
+          if (!ollisChart) {
+            var canvas = document.getElementById('ollisChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("ollisChart").getContext("2d");
+            ollisChart = new Chart(ctx);
+          }
+          ollisChart.Bar(dataOllis, optionsC);
+        }
+        // juhani
+        if (anchorLink === 'Players' && slideIndex === 15) {
+          if (!juhaniChart) {
+            var canvas = document.getElementById('juhaniChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("juhaniChart").getContext("2d");
+            juhaniChart = new Chart(ctx);
+          }
+          juhaniChart.Bar(dataJuhani, optionsC);
+        }
+        // niklas
+        if (anchorLink === 'Players' && slideIndex === 16) {
+          if (!niklasChart) {
+            var canvas = document.getElementById('niklasChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("niklasChart").getContext("2d");
+            niklasChart = new Chart(ctx);
+          }
+          niklasChart.Bar(dataNiklas, optionsC);
+        }
+        // matias
+        if (anchorLink === 'Players' && slideIndex === 17) {
+          if (!matiasChart) {
+            var canvas = document.getElementById('matiasChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("matiasChart").getContext("2d");
+            matiasChart = new Chart(ctx);
+          }
+          matiasChart.Bar(dataMatias, optionsC);
+        }
+        // matiasm
+        if (anchorLink === 'Players' && slideIndex === 18) {
           if (!matiasmChart) {
             var canvas = document.getElementById('matiasmChart');
-            console.log(canvas);
             var playerBox = document.getElementById('frame');
-            console.log(playerBox);
             canvas.width = playerBox.offsetWidth - 30;
             canvas.height = playerBox.offsetHeight;
             var ctx = document.getElementById("matiasmChart").getContext("2d");
@@ -47,68 +244,65 @@ $(document).ready(function () {
           }
           matiasmChart.Bar(dataMatiasm, optionsC);
         }
-        if (anchorLink === 'Players' && slideIndex === 2) {
-          tuomasChart.Bar(dataTuomas, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 3) {
-          petteriChart.Bar(dataPetteri, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 4) {
-          jukkaChart.Bar(dataJukka, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 5) {
-          jukkahChart.Bar(dataJukkah, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 6) {
-          kristianChart.Bar(dataKristian, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 7) {
-          jussiChart.Bar(dataJussi, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 8) {
-          rikuChart.Bar(dataRiku, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 9) {
-          olliChart.Bar(dataOlli, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 10) {
-          jaakkoChart.Bar(dataJaakko, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 11) {
-          benjaminChart.Bar(dataBenjamin, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 12) {
-          kimmoChart.Bar(dataKimmo, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 13) {
-          teemuChart.Bar(dataTeemu, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 14) {
-          mikkojChart.Bar(dataMikkoj, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 15) {
-          ollisChart.Bar(dataOllis, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 16) {
-          niklasChart.Bar(dataNiklas, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 17) {
-          matiasChart.Bar(dataMatias, options);
-        }
-        if (anchorLink === 'Players' && slideIndex === 18) {
-          matiasmChart.Bar(dataMatiasm, options);
-        }
+        // sauli
         if (anchorLink === 'Players' && slideIndex === 19) {
-          sauliChart.Bar(dataSauli, options);
+          if (!sauliChart) {
+            var canvas = document.getElementById('sauliChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("sauliChart").getContext("2d");
+            sauliChart = new Chart(ctx);
+          }
+          sauliChart.Bar(dataSauli, optionsC);
         }
+        // lauri
         if (anchorLink === 'Players' && slideIndex === 20) {
-          lauriChart.Bar(dataLauri, options);
+          if (!lauriChart) {
+            var canvas = document.getElementById('lauriChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("lauriChart").getContext("2d");
+            lauriChart = new Chart(ctx);
+          }
+          lauriChart.Bar(dataLauri, optionsC);
         }
+        // benjamin
         if (anchorLink === 'Players' && slideIndex === 21) {
-          viliChart.Bar(dataVili, options);
+          if (!benjaminChart) {
+            var canvas = document.getElementById('benjaminChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("benjaminChart").getContext("2d");
+            benjaminChart = new Chart(ctx);
+          }
+          benjaminChart.Bar(dataBenjamin, optionsC);
         }
+        // vili
         if (anchorLink === 'Players' && slideIndex === 22) {
-          jussilChart.Bar(dataJussil, options);
+          if (!viliChart) {
+            var canvas = document.getElementById('viliChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("viliChart").getContext("2d");
+            viliChart = new Chart(ctx);
+          }
+          viliChart.Bar(dataVili, optionsC);
+        }
+        // jussil
+        if (anchorLink === 'Players' && slideIndex === 23) {
+          if (!jussilChart) {
+            var canvas = document.getElementById('jussilChart');
+            var playerBox = document.getElementById('frame');
+            canvas.width = playerBox.offsetWidth - 30;
+            canvas.height = playerBox.offsetHeight;
+            var ctx = document.getElementById("jussilChart").getContext("2d");
+            jussilChart = new Chart(ctx);
+          }
+          jussilChart.Bar(dataJussil, optionsC);
         }
 
       },
@@ -116,19 +310,14 @@ $(document).ready(function () {
         //
       },
       afterResize: function() {
-        console.log("reload");
         location.reload();
       }
     });
     
     // Wait until the video meta data has loaded
   $('#section1 video').on('loadedmetadata', function () {
-    console.log(screen.width);
-    console.log(screen.height);
     var x = $(window).height();
     var y = $(window).width();
-    console.log(x);
-    console.log(y);
     if (screen.width <= 1200) {
       $("#canvas").css("color", "red");
       return;
@@ -224,352 +413,352 @@ var dataMika = {
     data: [70, 70, 60, 65, 100, 80, 74]
   }]
 };
-// // mikaChart = new Chart(document.getElementById("mikaChart").getContext("2d"));
-// // Data Players Hirvonen
-// var dataMikko = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [79, 75, 70, 85, 90, 70, 78]
-//         }
-//     ]
-// };
-// var mikkoChart = new Chart(document.getElementById("mikkoChart").getContext("2d"));
-// // Data Tuomas Viertola
-// var dataTuomas = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [97,97,93,95,99,88,95]
-//         }
-//     ]
-// };
-// var tuomasChart = new Chart(document.getElementById("tuomasChart").getContext("2d"));
-// // Data Petteri Salo
-// var dataPetteri = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [85,79,75,90,74,65,78]
-//         }
-//     ]
-// };
-// var petteriChart = new Chart(document.getElementById("petteriChart").getContext("2d"));
-// // Data Jukka Rajamäki
-// var dataJukka = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [90,80,90,88,70,79,83]
-//         }
-//     ]
-// };
-// var jukkaChart = new Chart(document.getElementById("jukkaChart").getContext("2d"));
-// // Data Jukka Heino
-// var dataJukkah = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [65,90,68,75,85,91,79]
-//         }
-//     ]
-// };
-// var jukkahChart = new Chart(document.getElementById("jukkahChart").getContext("2d"));
-// // Data Kristian Lindfors
-// var dataKristian = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [60,65,85,65,85,100,77]
-//         }
-//     ]
-// };
-// var kristianChart = new Chart(document.getElementById("kristianChart").getContext("2d"));
-// // Data Jussi Malminen
-// var dataJussi = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [74,79,75,95,80,87,82]
-//         }
-//     ]
-// };
-// var jussiChart = new Chart(document.getElementById("jussiChart").getContext("2d"));
-// // Data Riku Lempiä
-// var dataRiku = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [83,91,97,83,69,97,87]
-//         }
-//     ]
-// };
-// var rikuChart = new Chart(document.getElementById("rikuChart").getContext("2d"));
-// // Data Olli Harju
-// var dataOlli = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [55,60,79,65,77,85,70]
-//         }
-//     ]
-// };
-// var olliChart = new Chart(document.getElementById("olliChart").getContext("2d"));
-// // Data Jaakko Lievonen
-// var dataJaakko = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [55,60,88,55,70,83,69]
-//         }
-//     ]
-// };
-// var jaakkoChart = new Chart(document.getElementById("jaakkoChart").getContext("2d"));
-// // Data Benjamin Kokkonen
-// var dataBenjamin = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 198, 198, 0.82)",
-//             highlightFill: "rgba(86, 164, 254, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [60,70,75,69,70,78,70]
-//         }
-//     ]
-// };
-// var benjaminChart = new Chart(document.getElementById("benjaminChart").getContext("2d"));
+// Data Players Hirvonen
+var mikkoChart = null;
+var dataMikko = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [79, 75, 70, 85, 90, 70, 78]
+        }
+    ]
+};
+// Data Tuomas Viertola
+var tuomasChart = null;
+var dataTuomas = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [97,97,93,95,99,88,95]
+        }
+    ]
+};
+
+// Data Petteri Salo
+var dataPetteri = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [85,79,75,90,74,65,78]
+        }
+    ]
+};
+var petteriChart = null;
+// Data Jukka Rajamäki
+var dataJukka = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [90,80,90,88,70,79,83]
+        }
+    ]
+};
+var jukkaChart = null;
+// Data Jukka Heino
+var dataJukkah = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [65,90,68,75,85,91,79]
+        }
+    ]
+};
+var jukkahChart = null;
+// Data Kristian Lindfors
+var dataKristian = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [60,65,85,65,85,100,77]
+        }
+    ]
+};
+var kristianChart = null;
+// Data Jussi Malminen
+var dataJussi = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [74,79,75,95,80,87,82]
+        }
+    ]
+};
+var jussiChart = null;
+// Data Riku Lempiä
+var dataRiku = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [83,91,97,83,69,97,87]
+        }
+    ]
+};
+var rikuChart = null;
+// Data Olli Harju
+var dataOlli = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [55,60,79,65,77,85,70]
+        }
+    ]
+};
+var olliChart = null;
+// Data Jaakko Lievonen
+var dataJaakko = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(29, 141, 204, 0.79)",
+            strokeColor: "rgba(199, 198, 198, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [55,60,88,55,70,83,69]
+        }
+    ]
+};
+var jaakkoChart = null;
 // ////////////////////////////
 // // Contenders/////
 // ////////////////////////////
-// // Data Kimmo Reunila
-// var dataKimmo = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [70,80,80,76,83,85,79]
-//         }
-//     ]
-// };
-// var kimmoChart = new Chart(document.getElementById("kimmoChart").getContext("2d"));
-// // Data Teemu Seppälä
-// var dataTeemu = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [50,65,75,55,88,75,68]
-//         }
-//     ]
-// };
-// var teemuChart = new Chart(document.getElementById("teemuChart").getContext("2d"));
-// // Data Mikko Jämsä
-// var dataMikkoj = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [97,88,80,98,100,86,92]
-//         }
-//     ]
-// };
-// var mikkojChart = new Chart(document.getElementById("mikkojChart").getContext("2d"));
-// // Data Olli Salminen
-// var dataOllis = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [65,65,70,65,73,77,69]
-//         }
-//     ]
-// };
-// var ollisChart = new Chart(document.getElementById("ollisChart").getContext("2d"));
-// // Data Juhani Jämsä
-// var dataJuhani = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [88,85,85,100,77,83,86]
-//         }
-//     ]
-// };
-// var juhaniChart = new Chart(document.getElementById("juhaniChart").getContext("2d"));
-// // Data Niklas Lindström
-// var dataNiklas = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [70,76,81,71,80,80,76]
-//         }
-//     ]
-// };
-// var niklasChart = new Chart(document.getElementById("niklasChart").getContext("2d"));
-// // Data Matias Repo
-// var dataMatias = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [55,69,83,55,65,82,68]
-//         }
-//     ]
-// };
-// var matiasChart = new Chart(document.getElementById("matiasChart").getContext("2d"));
-// Data Matias Mattila
-var matiasmChart = null;
-var dataMatiasm = {
-  labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-  datasets: [{
-    label: "Skills",
+// Data Kimmo Reunila
+var dataKimmo = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [70,80,80,76,83,85,79]
+        }
+    ]
+};
+var kimmoChart = null;
+// Data Teemu Seppälä
+var dataTeemu = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
     fillColor: "rgba(255, 66, 61, 0.79)",
     strokeColor: "rgba(199, 156, 156, 0.82)",
     highlightFill: "rgba(255, 255, 255, 0.83)",
     highlightStroke: "rgba(220,220,220,1)",
-    data: [74, 90, 92, 71, 85, 100, 85]
-  }]
+            data: [50,65,75,55,88,75,68]
+        }
+    ]
 };
-// // Data Sauli Sukanen
-// var dataSauli = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [93,88,95,89,78,79,87]
-//         }
-//     ]
-// };
-// var sauliChart = new Chart(document.getElementById("sauliChart").getContext("2d"));
-// // Data Lauri Jämsä
-// var dataLauri = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [82,91,86,80,85,80,84]
-//         }
-//     ]
-// };
-// var lauriChart = new Chart(document.getElementById("lauriChart").getContext("2d"));
-// // Data Vili Valajärvi
-// var dataVili = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [55,55,63,60,83,75,65]
-//         }
-//     ]
-// };
-// var viliChart = new Chart(document.getElementById("viliChart").getContext("2d"));
-// // Data Jussi Lilja
-// var dataJussil = {
-//     labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
-//     datasets: [
-//         {
-//             label: "Skills",
-//             fillColor: "rgba(225, 238, 255, 0.69)",
-//             strokeColor: "rgba(199, 156, 156, 0.82)",
-//             highlightFill: "rgba(255, 85, 85, 0.75)",
-//             highlightStroke: "rgba(220,220,220,1)",
-//             data: [67,75,64,76,80,73,73]
-//         }
-//     ]
-// };
-// var jussilChart = new Chart(document.getElementById("jussilChart").getContext("2d"));
-
-// var function loadPlayerStats(statsObject,)
+var teemuChart = null;
+// Data Mikko Jämsä
+var dataMikkoj = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [97,88,80,98,100,86,92]
+        }
+    ]
+};
+var mikkojChart = null;
+// Data Olli Salminen
+var dataOllis = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [65,65,70,65,73,77,69]
+        }
+    ]
+};
+var ollisChart = null;
+// Data Juhani Jämsä
+var dataJuhani = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [88,85,85,100,77,83,86]
+        }
+    ]
+};
+var juhaniChart = null;
+// Data Niklas Lindström
+var dataNiklas = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [70,76,81,71,80,80,76]
+        }
+    ]
+};
+var niklasChart = null;
+// Data Matias Repo
+var dataMatias = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [55,69,83,55,65,82,68]
+        }
+    ]
+};
+var matiasChart = null;
+// Data Matias Mattila
+var matiasmChart = null;
+var dataMatiasm = {
+  labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+  datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [74, 90, 92, 71, 85, 100, 85]
+        }
+  ]
+};
+// Data Sauli Sukanen
+var dataSauli = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [93,88,95,89,78,79,87]
+        }
+    ]
+};
+var sauliChart = null;
+// Data Lauri Jämsä
+var dataLauri = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [82,91,86,80,85,80,84]
+        }
+    ]
+};
+var lauriChart = null;
+// Data Benjamin Kokkonen
+var dataBenjamin = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [60,70,75,69,70,78,70]
+        }
+    ]
+};
+var benjaminChart = null;
+// Data Vili Valajärvi
+var dataVili = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [55,55,63,60,83,75,65]
+        }
+    ]
+};
+var viliChart = null;
+// Data Jussi Lilja
+var dataJussil = {
+    labels: ["scoring", "defence", "rebounding", "passing|IQ", "speed", "hustle", "average"],
+    datasets: [
+        {
+            label: "Skills",
+            fillColor: "rgba(255, 66, 61, 0.79)",
+            strokeColor: "rgba(199, 156, 156, 0.82)",
+            highlightFill: "rgba(255, 255, 255, 0.83)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [67,75,64,76,80,73,73]
+        }
+    ]
+};
+var jussilChart = null;

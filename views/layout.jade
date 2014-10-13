@@ -4,15 +4,15 @@ html
     title MikaJam
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/jquery.fullPage.css')
-    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
-    script(src="/bower_components/jquery/dist/jquery.js")
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    script(src="/bower_components/jquery/dist/jquery.min.js")
     script(src="/javascripts/slapText.min.js")
-    script(src="/javascripts/Chart.js")
+    script(src="/javascripts/chart.min.js")
 
-    script(src="/javascripts/jquery.fullPage.js")
+    script(src="/javascripts/jquery.fullPage.min.js")
     script(src="/javascripts/vendors/jquery.easings.min.js")
     script(src="/javascripts/vendors/jquery.slimscroll.min.js")
-    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
 
   body
     ul(id="menu" class="container")
@@ -245,6 +245,360 @@ html
                     h3 GUARD
             div.frame.col-md-4.canvas
               canvas(id="mikaChart" class="canvas" width="400" height="400")
+        // Mikko Hirvonen
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/mikko_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b MIKKO HIRVONEN
+                  |&nbsp;#4
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 177 cm
+                  li
+                    h3 74 kg
+                  li
+                    h3 GUARD
+            div.frame.col-md-4.canvas
+              canvas(id="mikkoChart" class="canvas" width="400" height="400")
+        // Tuomas Viertola
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/tuomas_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b TUOMAS VIERTOLA
+                  |&nbsp;#6
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 193 cm
+                  li
+                    h3 95 kg
+                  li
+                    h3 GUARD | FORWARD | CENTER 
+            div.frame.col-md-4.canvas
+              canvas(id="tuomasChart" class="canvas" width="400" height="400")
+        // Petteri Salo
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/petteri_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b PETTERI SALO
+                  |&nbsp;#9
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 184 cm
+                  li
+                    h3 80 kg
+                  li
+                    h3 GUARD | FORWARD
+            div.frame.col-md-4.canvas
+              canvas(id="petteriChart" class="canvas" width="400" height="400")
+        // Jukka Rajamäki
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/jukka_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b JUKKA RAJAMÄKI
+                  |&nbsp;#11
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 196 cm
+                  li
+                    h3 110 kg
+                  li
+                    h3 FORWARD | CENTER
+            div.frame.col-md-4.canvas
+              canvas(id="jukkaChart" class="canvas" width="400" height="400")
+        // Jukka Heino
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/jukkah_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b JUKKA HEINO
+                  |&nbsp;#12
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 173 cm
+                  li
+                    h3 76 kg
+                  li
+                    h3 GUARD
+            div.frame.col-md-4.canvas
+              canvas(id="jukkahChart" class="canvas" width="400" height="400")
+        // Kristian Lindfors
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/kristian_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b KRISTIAN LINDFORS
+                  |&nbsp;#13
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 182 cm
+                  li
+                    h3 84 kg
+                  li
+                    h3 GUARD | FORWARD
+            div.frame.col-md-4.canvas
+              canvas(id="kristianChart" class="canvas" width="400" height="400")
+        // Jussi Malminen
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/jussi_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b JUSSI MALMINEN
+                  |&nbsp;#20
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 182 cm
+                  li
+                    h3 80 kg
+                  li
+                    h3 GUARD
+            div.frame.col-md-4.canvas
+              canvas(id="jussiChart" class="canvas" width="400" height="400")
+        // Riku Lempiö
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/riku_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b RIKU LEMPIÖ
+                  |&nbsp;#31
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 197 cm
+                  li
+                    h3 100 kg
+                  li
+                    h3 FORWARD | CENTER
+            div.frame.col-md-4.canvas
+              canvas(id="rikuChart" class="canvas" width="400" height="400")
+        // Olli Harju
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/olli_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b OLLI HARJU
+                  |&nbsp;#32
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 188 cm
+                  li
+                    h3 90 kg
+                  li
+                    h3 FORWARD
+            div.frame.col-md-4.canvas
+              canvas(id="olliChart" class="canvas" width="400" height="400")
+        // Jaakko Lievonen
+        div.slide.container
+          div(class="well playerBox masB")
+            div.col-md-4.frame.masBorder
+              span.helper
+              img(src="/images/jaakko_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              span.helper
+              div.playerStats
+                h2
+                  b JAAKKO LIEVONEN
+                  |&nbsp;#69
+                //- h3.mas Mika's All Stars
+                ul.playerStats
+                  li
+                    h3 177 cm
+                  li
+                    h3 90 kg
+                  li
+                    h3 FORWARD
+            div.frame.col-md-4.canvas
+              canvas(id="jaakkoChart" class="canvas" width="400" height="400")
+
+        // Kimmo Reunila
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/kimmo_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b KIMMO REUNILA C
+                |&nbsp;#23
+              ul.playerStats
+                li
+                  h3 183 cm
+                li
+                  h3 78 kg
+                li
+                  h3 GUARD | FORWARD
+            div.frame.col-md-4
+              canvas(id="kimmoChart" class="canvas" width="400" height="400")
+        // Teemu Seppälä
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/teemu_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b TEEMU SEPPÄLÄ
+                |&nbsp;#0
+              ul.playerStats
+                li
+                  h3 175 cm
+                li
+                  h3 76 kg
+                li
+                  h3 BENCH PLAYER
+            div.frame.col-md-4
+              canvas(id="teemuChart" class="canvas" width="400" height="400")
+        // Mikko Jämsä
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/mikkoj_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b MIKKO JÄMSÄ
+                |&nbsp;#3
+              ul.playerStats
+                li
+                  h3 177 cm
+                li
+                  h3 70 kg
+                li
+                  h3 GUARD
+            div.frame.col-md-4
+              canvas(id="mikkojChart" class="canvas" width="400" height="400")
+        // Olli Salminen
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/ollis_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b OLLI SALMINEN
+                |&nbsp;#4
+              ul.playerStats
+                li
+                  h3 173 cm
+                li
+                  h3 78 kg
+                li
+                  h3 GUARD
+            div.frame.col-md-4
+              canvas(id="ollisChart" class="canvas" width="400" height="400")
+        // Juhani Jämsä
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/juhani_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b JUHANI JÄMSÄ
+                |&nbsp;#5
+              ul.playerStats
+                li
+                  h3 190 cm
+                li
+                  h3 90 kg
+                li
+                  h3 GUARD
+            div.frame.col-md-4
+              canvas(id="juhaniChart" class="canvas" width="400" height="400")
+        // Niklas Lindström
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/niklas_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b NIKLAS LINDSTRÖM
+                |&nbsp;#7
+              ul.playerStats
+                li
+                  h3 183 cm
+                li
+                  h3 77 kg
+                li
+                  h3 GUARD | FORWARD
+            div.frame.col-md-4
+              canvas(id="niklasChart" class="canvas" width="400" height="400")
+        // Matias Repo
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/matias_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b MATIAS REPO
+                |&nbsp;#10
+              ul.playerStats
+                li
+                  h3 181 cm
+                li
+                  h3 95 kg
+                li
+                  h3 FORWARD
+            div.frame.col-md-4
+              canvas(id="matiasChart" class="canvas" width="400" height="400")
         // Matias Mattila
         div.slide.container
           div(class="well playerBox conB")
@@ -253,7 +607,7 @@ html
               img(src="/images/molsa_profile.png" class="canvas playerPhoto")
             div.col-md-4.frame
               h2
-                b Matias Mattila
+                b MATIAS MATTILA
                 |&nbsp;#21
               ul.playerStats
                 li
@@ -264,6 +618,102 @@ html
                   h3 GUARD | FORWARD
             div.frame.col-md-4
               canvas(id="matiasmChart" class="canvas" width="400" height="400")
+        // Sauli Sukanen
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/sauli_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b SAULI SUKANEN
+                |&nbsp;#24
+              ul.playerStats
+                li
+                  h3 195 cm
+                li
+                  h3 100 kg
+                li
+                  h3 FORWARD | CENTER
+            div.frame.col-md-4
+              canvas(id="sauliChart" class="canvas" width="400" height="400")
+        // Lauri Jämsä
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/lauri_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b LAURI JÄMSÄ
+                |&nbsp;#33
+              ul.playerStats
+                li
+                  h3 180 cm
+                li
+                  h3 80 kg
+                li
+                  h3 GUARD | FORWARD
+            div.frame.col-md-4
+              canvas(id="lauriChart" class="canvas" width="400" height="400")
+        // Benjamin Kokkonen
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/benjamin_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b BENJAMIN KOKKONEN
+                |&nbsp;#50
+              ul.playerStats
+                li
+                  h3 184 cm
+                li
+                  h3 105 kg
+                li
+                  h3 GUARD | FORWARD
+            div.frame.col-md-4
+              canvas(id="benjaminChart" class="canvas" width="400" height="400")
+        // Vili Valajärvi
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/vili_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b VILI VALAJÄRVI
+                |&nbsp;#55
+              ul.playerStats
+                li
+                  h3 176 cm
+                li
+                  h3 82 kg
+                li
+                  h3 GUARD
+            div.frame.col-md-4
+              canvas(id="viliChart" class="canvas" width="400" height="400")
+        // Jussi Lilja
+        div.slide.container
+          div(class="well playerBox conB")
+            div.col-md-4.frame#frame
+              span.helper
+              img(src="/images/jussil_profile_logo.png" class="canvas playerPhoto")
+            div.col-md-4.frame
+              h2
+                b JUSSI LILJA
+                |&nbsp;#89
+              ul.playerStats
+                li
+                  h3 176 cm
+                li
+                  h3 78 kg
+                li
+                  h3 GUARD
+            div.frame.col-md-4
+              canvas(id="jussilChart" class="canvas" width="400" height="400")
+
         //- // Tuomas Viertola
         //- div.slide.container
         //-   div(class="well playerBox")

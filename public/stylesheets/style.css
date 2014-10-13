@@ -44,11 +44,15 @@ body {
   font-family: quicksand;
   src: url("/stylesheets/Quicksand-Light.otf");
 }
-@font-face {
-  font-family: quicksandRegular;
-  src: url("/stylesheets/Quicksand-Regular.otf");
-}
 @media screen and (min-width: 998px) {
+  @font-face {
+    font-family: quicksandRegular;
+    src: url("/stylesheets/Quicksand-Regular.otf");
+  }
+  @font-face {
+    font-family: GoLong;
+    src: url("/stylesheets/Dense-Regular.otf");
+  }
   #mobile {
     display: none;
   }
@@ -121,6 +125,7 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     margin: 0;
+    font-family: quicksandRegular;
   }
   #page1h1 {
     z-index: 1;
@@ -216,7 +221,7 @@ body {
   .thumbnailTextCon:hover {
     background-color: #ff423d;
     font-family: airstream;
-    font-size: 1.5em;
+    font-size: 1.3em;
     opacity: 1;
     border-radius: 3px;
   }
@@ -253,7 +258,7 @@ body {
 /* Chrome10+,Safari5.1+ */
   }
   .well.playerBox {
-    font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+    font-family: quicksandRegular;
     color: #fff;
     overflow: auto;
     border-style: solid;
@@ -264,6 +269,9 @@ body {
     margin-left: 60px;
     margin-right: 60px;
     padding: 0px;
+  }
+  .well.playerBox h2 {
+    font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   }
   .well.masB {
     background: -webkit-radial-gradient(center, ellipse cover, rgba(125,126,125,0.9) 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);

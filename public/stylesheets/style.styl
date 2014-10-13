@@ -40,11 +40,11 @@ body
     font-family: quicksand;
     src: url("/stylesheets/Quicksand-Light.otf");
 }
-@font-face {
+@media screen and (min-width: 998px)
+  @font-face {
     font-family: quicksandRegular;
     src: url("/stylesheets/Quicksand-Regular.otf");
-}
-@media screen and (min-width: 998px)
+  }
   #mobile
     display: none
 
@@ -105,6 +105,7 @@ body
     padding-left: 5px
     padding-right: 5px
     margin: 0
+    font-family: quicksandRegular
 
   #page1h1
     z-index 1;
@@ -204,14 +205,14 @@ body
 
   .thumbnailTextMas:hover
     background-color: rgba(29, 141, 204, 1)
-    font-family: airstream;
+    font-family: airstream
     font-size: 1.3em
     opacity: 1
     border-radius: 3px
   .thumbnailTextCon:hover
     background-color: rgba(255, 66, 61, 1)
     font-family: airstream;
-    font-size: 1.5em
+    font-size: 1.3em
     opacity: 1
     border-radius: 3px
 
@@ -257,7 +258,7 @@ body
   /////////////////////////////////////////////
 
   .well.playerBox
-    font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+    font-family: quicksandRegular
     color: #ffffff
     overflow:auto
     border-style: solid
@@ -281,6 +282,9 @@ body
     margin-left: 60px
     margin-right: 60px
     padding: 0px
+  .well.playerBox h2
+    font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+
 
   .well.masB
     //background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,0.3) 0%, rgba(14,14,14,0.71) 58%, rgba(14,14,14,1) 100%); /* FF3.6+ */
