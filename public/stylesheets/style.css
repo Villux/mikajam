@@ -49,10 +49,6 @@ body {
     font-family: quicksandRegular;
     src: url("/stylesheets/Quicksand-Regular.otf");
   }
-  @font-face {
-    font-family: GoLong;
-    src: url("/stylesheets/Dense-Regular.otf");
-  }
   #mobile {
     display: none;
   }
@@ -68,6 +64,18 @@ body {
   }
   a {
     text-decoration: none;
+  }
+  #menu .iconContainer {
+    background-color: transparent;
+    border-width: 0px;
+  }
+  #menu li a {
+    display: inline-block !important;
+  }
+  .icon {
+    display: inline-block;
+    max-height: 30px;
+    max-width: 30px;
   }
   #menu li {
     display: inline-block;
@@ -94,10 +102,12 @@ body {
   #menu li .aMas:hover {
     background: rgba(29,141,204,0.9);
     border-radius: 10px;
+    min-width: 150px;
   }
   #menu li .aCon:hover {
     background: rgba(255,66,61,0.9);
     border-radius: 10px;
+    min-width: 150px;
   }
   #menu li.active .aMas:hover {
     background: rgba(29,141,204,0.9);
@@ -234,6 +244,12 @@ body {
     text-align: center;
     background: rgba(255,255,255,0.2) !important;
   }
+  .well.conTeam div.col-md-3 {
+    padding: 0px;
+  }
+  .well.masTeam div.col-md-3 {
+    padding: 0px;
+  }
   .playerBox img {
     vertical-align: middle;
     width: 100%;
@@ -257,8 +273,13 @@ body {
     background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);
 /* Chrome10+,Safari5.1+ */
   }
+  .well .thumbnailContainer {
+    padding: 0px;
+    margin: 0px;
+  }
   .well.playerBox {
     font-family: quicksandRegular;
+    font-size: 1.7em;
     color: #fff;
     overflow: auto;
     border-style: solid;
@@ -272,6 +293,7 @@ body {
   }
   .well.playerBox h2 {
     font-family: "Franklin Gothic Light", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+    font-size: 1.2em;
   }
   .well.masB {
     background: -webkit-radial-gradient(center, ellipse cover, rgba(125,126,125,0.9) 0%, rgba(14,14,14,0.8) 58%, #0e0e0e 100%);

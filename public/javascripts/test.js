@@ -382,6 +382,10 @@ var optionsM = {
   scaleFontSize: 11,
   scaleFontStyle: "normal",
   scaleFontColor: "#ffffff",
+  scaleOverride: true,
+  scaleSteps: 10,
+  scaleStepWidth: 10,
+  scaleStartValue: 0,
 
 };
 var optionsC = {
@@ -396,6 +400,10 @@ var optionsC = {
   scaleFontSize: 11,
   scaleFontStyle: "normal",
   scaleFontColor: "#ffffff",
+  scaleOverride: true,
+  scaleSteps: 10,
+  scaleStepWidth: 10,
+  scaleStartValue: 0,
 
 };
 
