@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var compression = require('compression')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -23,6 +24,9 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'))
+app.use(compression({
+  threshold: 512
+}))
 
 app.use('/', routes);
 app.use('/users', users);
