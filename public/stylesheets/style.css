@@ -162,13 +162,13 @@ body {
   #pheader {
     width: 98%;
     top: 0;
+    padding: 45px;
     position: fixed;
     background: rgba(0,0,0,0.79);
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 10px;
     font-size: 5.5em;
-    display: none;
     border-radius: 15px;
     margin-left: 13px;
     font-family: airstream;
