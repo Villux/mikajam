@@ -317,7 +317,6 @@ $(document).ready(function () {
   rosterMargin();
 
   $('#section1 video').on('loadedmetadata', function () {
-    console.log("täällä");
     var x = $(window).height();
     var y = $(window).width();
     if (screen.width <= 1200) {
@@ -773,7 +772,6 @@ var jussilChart = null;
 // edit roster fotos
 function rosterMargin() {
   var rosterBox = $('#conTeam').width();
-  console.log(rosterBox);
   var marginSizeCon = (rosterBox - 30 - 0.7*rosterBox)/14;
   var marginSizeMas = (rosterBox - 30 - 0.6*rosterBox)/12;
   $('.photoContainerCon').css("margin","0px " + marginSizeCon + "px");
