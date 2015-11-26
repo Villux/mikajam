@@ -1,49 +1,706 @@
-<html style="overflow: hidden; height: 100%;">
-<head>
-<title></title>
-<link rel="stylesheet" href="../stylesheets/style.css">
-<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/chartjs/Chart.js"></script>
-<script src="../javascripts/test.js"></script></head><body style="overflow: hidden; height: 100%;"><ul id="menu"><li data-menuanchor="firstPage" class=""><a href="#firstPage">First section</a></li><li data-menuanchor="secondPage" class="active"><a href="#secondPage">Second section</a></li><li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li><li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li></ul><div id="fullpage" class="fullpage-wrapper fp-easing" style="height: 100%; position: relative; -webkit-transform: translate3d(0px, -790px, 0px);"><div id="section1" class="section fp-section fp-table" data-anchor="firstPage" style="height: 468px; background-color: rgb(27, 188, 155); width: 1395px;"><div class="fp-tableCell" style="height:468px;"><video id="video" autoplay="" loop="" muted="" style="width: 1395px;"><source src="/images/kitefly.mp4" type="video/mp4"><source src="/images/kitefly.webmhd.webm" type="video/webm"></video><h1 id="page1h1">MikaJam ekasivu</h1></div></div><div id="section2" class="section fp-section active" data-anchor="secondPage" style="height: 468px; background-color: rgb(75, 191, 195);"><div class="fp-slides"><div class="fp-slidesContainer fp-easing" style="width: 300%; -webkit-transform: translate3d(0px, 0px, 0px);"><div class="slide fp-slide fp-table active" style="width: 33.333333333333336%;"><div class="fp-tableCell" style="height:468px;"><h1 class="fadeElement" style="display: block;">MikaJam tokasivu slide1</h1><div class="well fadeElement playerBox" style="display: block;"><h2>Player Name</h2><p>Info text</p><canvas id="myChart" width="1600" height="800" style="width: 800px; height: 400px;"></canvas></div></div></div><div class="slide fp-slide fp-table" style="width: 33.333333333333336%;"><div class="fp-tableCell" style="height:468px;"><h1 class="fadeElement" style="display: block;">MikaJam tokasivu slide2</h1><div class="well fadeElement playerBox" style="display: block;"><h2>Player Name</h2><p>Info textInfo textInfo textInfo textInfo textInfo textInfo text Info text \</p></div></div></div><div class="slide container fp-slide fp-table" style="width: 33.333333333333336%;"><div class="fp-tableCell" style="height:468px;"><h1 class="fadeElement" style="display: block;">MikaJam tokasivu slide3</h1><div class="well fadeElement playerBox col-md-12" style="display: block;"><h2>Player Name</h2><p>Info text</p></div></div></div></div></div><div class="fp-controlArrow fp-prev"></div><div class="fp-controlArrow fp-next"></div></div><div id="section3" class="section fp-section fp-table" data-anchor="thirdPage" style="height: 468px; background-color: rgb(123, 170, 190);"><div class="fp-tableCell" style="height:468px;"></div></div><div id="section4" class="section fp-section fp-table" data-anchor="fourthPage" style="height: 468px; background-color: rgb(245, 245, 245);"><div class="fp-tableCell" style="height:468px;"><canvas id="chart" width="1000" height="1000" style="width: 500px; height: 500px;"></canvas></div></div></div><div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -43.5px;"><ul><li data-tooltip="firstSlide"><a href="#firstPage" class=""><span></span></a></li><li data-tooltip="secondSlide"><a href="#secondPage" class="active"><span></span></a></li><li data-tooltip=""><a href="#thirdPage"><span></span></a></li><li data-tooltip=""><a href="#fourthPage"><span></span></a></li></ul></div>
-<script>
-  //chart stuff
-  var data = {
-  labels: ["Skill1", "Skill2", "Skill3", "Skill4", "Skill5"],
-  datasets: [
-      {
-          label: "Skill",
-          fillColor: "rgba(220,220,220,0.2)",
-          strokeColor: "rgba(220,220,220,1)",
-          pointColor: "rgba(220,220,220,1)",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(220,220,220,1)",
-          data: [65, 59, 90, 81, 56]
-      },
-      {
-          label: "My Second dataset",
-          fillColor: "rgba(151,187,205,0.2)",
-          strokeColor: "rgba(151,187,205,1)",
-          pointColor: "rgba(151,187,205,1)",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(151,187,205,1)",
-          data: [28, 48, 40, 19, 96]
-      }]
-  };
-
-  //Chart.defaults.global.responsive = true;
-  var options = {
-    datasetStrokeWidth : 2,
-    pointLabelFontColor : "#444",
-    angleLineColor : "rgba(0,0,0,0.6)",
-    scaleLineColor: "rgba(0,0,0,0.1)",
-    animationSteps: 100,
-    responsive: false,
-  };
-  var ctx = document.getElementById("myChart").getContext("2d");
-  var myRadarChart = new Chart(ctx).Radar(data, options);
-</script>
-
-</body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MikaJam</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/jquery.fullPage.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/slapText.min.js"></script>
+    <script type="text/javascript" src="/javascripts/chart.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="/javascripts/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="/javascripts/vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <ul id="menu" class="container">
+      <li data-menuanchor="Home" class="active "><a href="#Home" class="aMas">Home</a></li>
+      <li data-menuanchor="Info"><a href="#Info" class="aMas">Info</a></li>
+      <li class="iconContainer"><a href="https://www.facebook.com/mikajamit?fref=ts"><img src="/images/facebook.png" class="icon"></a><a href="https://www.youtube.com/channel/UClMG3xEEJtHp5NHl9MuNLPA"><img src="/images/youtube.png" class="icon"></a><a href="http://websta.me/tag/mikajam"><img src="/images/instagram.png" class="icon"></a></li>
+      <li data-menuanchor="Players" class="pull-right"><a href="#Players" class="aCon">Players Stats</a></li>
+      <li data-menuanchor="Rosters" class="pull-right"><a href="#Rosters" class="aCon">Rosters</a></li>
+    </ul>
+    <div id="mobile" class="container">
+      <h1 class="col-xs-12 airH">MikaJam</h1>
+      <h2 class="col-xs-12 air">20.12 12:00</h2>
+      <h2 class="col-xs-12 air">@ Vehkoja</h2>
+      <div class="col-xs-12 vsContainer">
+        <div class="col-xs-5"><img src="/images/mikasallstars2.png" class="col-xs-12"></div>
+        <div class="col-xs-2 vsText air">
+          <h1>VS</h1>
+        </div>
+        <div class="col-xs-5"><img src="/images/contenders_logo.png" class="col-xs-12"></div>
+      </div>
+      <h2 class="col-xs-12 air">What's the Jam?</h2>
+      <p>Tänä vuonna jo seitsemättä kertaa järjestettävä MikaJam on oodi koripallolle, hauskanpidolle ja ennen kaikkea ystävyydelle. Tapahtuman juuret juontavat  syvälle Hyvinkään Sveitsin lukion liikuntasaliin jossa ensimmäinen koripallopeli pelattiin Mika Linnaluoman syntymäpäivänä - tästä myös tapahtuma sai nimensä.</p>
+      <p>Vaikka Jamit ovatkin rakentuneet vanhojen HyPo -pelaajien ympärille, kentällä nähdään myös  eri lajien edustajia - jääkiekosta curlingiin. Intohimo urheilua ja lajia kohtaan näkyy kentällä ja tuntuu katsomossa. Tapahtuma ei ole osa meitä - me olemme tapahtuma.</p>
+      <h2 class="air">We are MikaJam</h2>
+      <p class="info">Sivujen täysversio pelaajakortteineen on nähtävillä tietokoneella</p>
+    </div>
+    <div id="fullpage">
+      <div id="section1" class="section active">
+        <video id="video" autoplay loop muted>
+          <source src="/images/video/layupgopro.mp4" type="video/mp4">
+          <source src="/images/video/layupgopro.webmhd.webm" type="video/webm">
+        </video>
+        <h1 id="pheader">MikaJam 20.12.2014 12:00 @ Vehkoja</h1>
+      </div>
+      <div id="section2" class="section">
+        <div id="infoPage" class="container col-md-10 col-md-offset-1">
+          <h1 class="col-md-12 airH-F">MikaJam 20.12 12:00 @ Vehkoja</h1>
+          <div class="col-md-8 vsContainer-F col-md-offset-2">
+            <div class="col-md-5"><img src="/images/mikasallstars2.png" class="col-xs-12"></div>
+            <div class="col-md-2 vsText-F air-F">
+              <h1>VS</h1>
+            </div>
+            <div class="col-md-5"><img src="/images/contenders_logo.png" class="col-xs-12"></div>
+          </div>
+          <div class="clearfix"></div>
+          <h2 class="col-md-12 air-F">What's the Jam?</h2>
+          <p>Tänä vuonna jo seitsemättä kertaa järjestettävä MikaJam on oodi koripallolle, hauskanpidolle ja ennen kaikkea ystävyydelle. Tapahtuman juuret juontavat  syvälle Hyvinkään Sveitsin lukion liikuntasaliin jossa ensimmäinen koripallopeli pelattiin Mika Linnaluoman syntymäpäivänä - tästä myös tapahtuma sai nimensä.</p>
+          <p>Vaikka Jamit ovatkin rakentuneet vanhojen HyPo -pelaajien ympärille, kentällä nähdään myös  eri lajien edustajia - jääkiekosta curlingiin. Intohimo urheilua ja lajia kohtaan näkyy kentällä ja tuntuu katsomossa. Tapahtuma ei ole osa meitä - me olemme tapahtuma.</p>
+          <h2 class="air-F">We are MikaJam</h2>
+        </div>
+      </div>
+      <div id="section3" class="section container">
+        <div class="masContainer col-md-12 row">
+          <div id="masTeam" class="well masTeam col-md-9 pull-left"><a href="#Players" class="photoContainerMas top">
+              <p class="thumbnailTextMas">Mika <br> Linnaluoma</p><img src="/images/mika_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/1" class="photoContainerMas top">
+              <p class="thumbnailTextMas">Mikko <br> Hirvonen</p><img src="/images/mikko_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/2" class="photoContainerMas top">
+              <p class="thumbnailTextMas">Tuomas <br> Viertola</p><img src="/images/tuomas_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/3" class="photoContainerMas top">
+              <p class="thumbnailTextMas">Petteri <br> Salo</p><img src="/images/petteri_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/4" class="photoContainerMas top">
+              <p class="thumbnailTextMas">Jukka <br> Rajamäki</p><img src="/images/jukka_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/5" class="photoContainerMas top">
+              <p class="thumbnailTextMas">Jukka <br> Heino</p><img src="/images/jukkah_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/6" class="photoContainerMas bottom">
+              <p class="thumbnailTextMas">Kristian <br> Lindfors</p><img src="/images/kristian_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/7" class="photoContainerMas bottom">
+              <p class="thumbnailTextMas">Jussi <br> Malminen</p><img src="/images/jussi_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/8" class="photoContainerMas bottom">
+              <p class="thumbnailTextMas">Riku <br> Lempiö</p><img src="/images/riku_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/9" class="photoContainerMas bottom">
+              <p class="thumbnailTextMas">Olli <br> Harju</p><img src="/images/olli_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/10" class="photoContainerMas bottom">
+              <p class="thumbnailTextMas">Jaakko <br> Lievonen</p><img src="/images/jaakko_profile_logo.png" alt="..." class="playerThumbnail"></a></div>
+          <div class="masTeamText col-md-3 pull-right"><img src="/images/mikasallstars2.png" class="col-md-12"></div>
+        </div>
+        <div class="conContainer col-md-12 row">
+          <div class="conTeamText col-md-3 pull-left"><img src="/images/contenders_logo.png" class="col-md-12"></div>
+          <div id="conTeam" class="well conTeam col-md-9 pull-right"><a href="#Players/11" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Kimmo<br>Reunila</p><img src="/images/kimmo_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/12" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Teemu<br>Seppälä</p><img src="/images/teemu_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/13" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Mikko<br>Jämsä</p><img src="/images/mikkoj_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/14" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Olli<br>Salminen</p><img src="/images/ollis_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/15" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Juhani<br>Jämsä</p><img src="/images/juhani_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/16" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Niklas<br>Lindström</p><img src="/images/niklas_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/17" class="photoContainerCon top">
+              <p class="thumbnailTextCon">Matias<br>Repo</p><img src="/images/matias_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/18" class="photoContainerCon bottom">
+              <p class="thumbnailTextCon">Matias<br>Mattila</p><img src="/images/matiasm_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/19" class="photoContainerCon bottom">
+              <p class="thumbnailTextCon">Sauli<br>Sukanen</p><img src="/images/sauli_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/20" class="photoContainerCon bottom">
+              <p class="thumbnailTextCon">Lauri<br>Jämsä</p><img src="/images/lauri_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/21" class="photoContainerCon bottom">
+              <p class="thumbnailTextCon">Benjaminen<br>Kokkonen</p><img src="/images/benjamin_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/22" class="photoContainerCon bottom">
+              <p class="thumbnailTextCon">Vili<br>Valajärvi</p><img src="/images/vili_profile_logo.png" alt="..." class="playerThumbnail"></a><a href="#Players/23" class="photoContainerCon bottom">
+              <p class="thumbnailTextCon">Jussi<br>Lilja</p><img src="/images/jussil_profile_logo.png" alt="..." class="playerThumbnail"></a></div>
+        </div>
+      </div>
+      <div id="section4" class="section">
+        <!-- Mika Linnaluoma-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/mika_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>MIKA LINNALUOMA</b>&nbsp;#5 C</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>179 cm</h3>
+                  </li>
+                  <li>
+                    <h3>78 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="mikaChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Mikko Hirvonen-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/mikko_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>MIKKO HIRVONEN</b>&nbsp;#4</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>177 cm</h3>
+                  </li>
+                  <li>
+                    <h3>74 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="mikkoChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Tuomas Viertola-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/tuomas_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>TUOMAS VIERTOLA</b>&nbsp;#6</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>193 cm</h3>
+                  </li>
+                  <li>
+                    <h3>95 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD | CENTER</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="tuomasChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Petteri Salo-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/petteri_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>PETTERI SALO</b>&nbsp;#9</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>184 cm</h3>
+                  </li>
+                  <li>
+                    <h3>80 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="petteriChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Jukka Rajamäki-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/jukka_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>JUKKA RAJAMÄKI</b>&nbsp;#11</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>196 cm</h3>
+                  </li>
+                  <li>
+                    <h3>110 kg</h3>
+                  </li>
+                  <li>
+                    <h3>FORWARD | CENTER</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="jukkaChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Jukka Heino-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/jukkah_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>JUKKA HEINO</b>&nbsp;#12</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>173 cm</h3>
+                  </li>
+                  <li>
+                    <h3>76 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="jukkahChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Kristian Lindfors-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/kristian_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>KRISTIAN LINDFORS</b>&nbsp;#13</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>182 cm</h3>
+                  </li>
+                  <li>
+                    <h3>84 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="kristianChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Jussi Malminen-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/jussi_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>JUSSI MALMINEN</b>&nbsp;#20</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>182 cm</h3>
+                  </li>
+                  <li>
+                    <h3>80 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="jussiChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Riku Lempiö-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/riku_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>RIKU LEMPIÖ</b>&nbsp;#31</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>197 cm</h3>
+                  </li>
+                  <li>
+                    <h3>100 kg</h3>
+                  </li>
+                  <li>
+                    <h3>FORWARD | CENTER</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="rikuChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Olli Harju-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/olli_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>OLLI HARJU</b>&nbsp;#32</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>188 cm</h3>
+                  </li>
+                  <li>
+                    <h3>90 kg</h3>
+                  </li>
+                  <li>
+                    <h3>FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="olliChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Jaakko Lievonen-->
+        <div class="slide container">
+          <div class="well playerBox masB">
+            <div class="col-md-4 frame masBorder"><span class="helper"></span><img src="/images/jaakko_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>JAAKKO LIEVONEN</b>&nbsp;#69</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>177 cm</h3>
+                  </li>
+                  <li>
+                    <h3>90 kg</h3>
+                  </li>
+                  <li>
+                    <h3>FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4 canvas">
+              <canvas id="jaakkoChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Kimmo Reunila-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/kimmo_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 fram"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>KIMMO REUNILA</b>&nbsp;#23 C</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>183 cm</h3>
+                  </li>
+                  <li>
+                    <h3>78 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="kimmoChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Teemu Seppälä-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/teemu_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>TEEMU SEPPÄLÄ</b>&nbsp;#0</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>175 cm</h3>
+                  </li>
+                  <li>
+                    <h3>76 kg</h3>
+                  </li>
+                  <li>
+                    <h3>BENCH PLAYER</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="teemuChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Mikko Jämsä-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/mikkoj_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>MIKKO JÄMSÄ</b>&nbsp;#3</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>177 cm</h3>
+                  </li>
+                  <li>
+                    <h3>70 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="mikkojChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Olli Salminen-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/ollis_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>OLLI SALMINEN</b>&nbsp;#4</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>173 cm</h3>
+                  </li>
+                  <li>
+                    <h3>78 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="ollisChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Juhani Jämsä-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/juhani_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>JUHANI JÄMSÄ</b>&nbsp;#5</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>190 cm</h3>
+                  </li>
+                  <li>
+                    <h3>90 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="juhaniChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Niklas Lindström-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/niklas_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>NIKLAS LINDSTRÖM</b>&nbsp;#7</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>183 cm</h3>
+                  </li>
+                  <li>
+                    <h3>77 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="niklasChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Matias Repo-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/matias_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>MATIAS REPO</b>&nbsp;#10</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>181 cm</h3>
+                  </li>
+                  <li>
+                    <h3>95 kg</h3>
+                  </li>
+                  <li>
+                    <h3>FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="matiasChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Matias Mattila-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/matiasm_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>MATIAS MATTILA</b>&nbsp;#21</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>188 cm</h3>
+                  </li>
+                  <li>
+                    <h3>88 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="matiasmChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Sauli Sukanen-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/sauli_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>SAULI SUKANEN</b>&nbsp;#24</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>195 cm</h3>
+                  </li>
+                  <li>
+                    <h3>100 kg</h3>
+                  </li>
+                  <li>
+                    <h3>FORWARD | CENTER</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="sauliChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Lauri Jämsä-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/lauri_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>LAURI JÄMSÄ</b>&nbsp;#33</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>180 cm</h3>
+                  </li>
+                  <li>
+                    <h3>80 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="lauriChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Benjamin Kokkonen-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/benjamin_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>BENJAMIN KOKKONEN</b>&nbsp;#50</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>184 cm</h3>
+                  </li>
+                  <li>
+                    <h3>105 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD | FORWARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="benjaminChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Vili Valajärvi-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/vili_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>VILI VALAJÄRVI</b>&nbsp;#55</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>176 cm</h3>
+                  </li>
+                  <li>
+                    <h3>82 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="viliChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Jussi Lilja-->
+        <div class="slide container">
+          <div class="well playerBox conB">
+            <div id="frame" class="col-md-4 frame"><span class="helper"></span><img src="/images/jussil_profile_logo.png" class="canvas playerPhoto"></div>
+            <div class="col-md-4 frame"><span class="helper"></span>
+              <div class="playerStats">
+                <h2><b>JUSSI LILJA</b>&nbsp;#89</h2>
+                <ul class="playerStats">
+                  <li>
+                    <h3>176 cm</h3>
+                  </li>
+                  <li>
+                    <h3>78 kg</h3>
+                  </li>
+                  <li>
+                    <h3>GUARD</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame col-md-4">
+              <canvas id="jussilChart" width="400" height="400" class="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript" src="/javascripts/playerData.js"></script>
+<script type="text/javascript" src="/javascripts/mikajam.js"></script>
