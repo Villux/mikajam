@@ -3,7 +3,8 @@ html
 body
   padding: 50px
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-  background-image: url("/images/asphalt_texture_mobile.jpg")
+  background: rgba(0,0,0,0)
+  z-index: -100
 
 #mobile
   background: rgba(33, 29, 41, 0.90)
@@ -34,7 +35,7 @@ body
 
 .info
   font-family: quicksand
-  font-size: 0.6em 
+  font-size: 0.6em
 
 @font-face {
     font-family: airstream;
@@ -432,5 +433,7 @@ body
 
 
 @media screen and (max-width: 998px)
+  body
+    background-image: url("/images/asphalt_texture_mobile.jpg")
   #fullpage, #menu
     display: none
